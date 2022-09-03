@@ -5,15 +5,31 @@
       "text": "START:",
       "color": "black",
       "border": "2px solid green",
-      // "borderRadius": "1px", //NOTE: using borderRadius along with `border` or you will see nothing change
       "backgroundColor": "#21d91c"
     },
     {
       "text": "END:",
       "color": "black",
       "border": "2px solid rgb(255,25,25)",
-      // "borderRadius": "1px", //NOTE: using borderRadius along with `border` or you will see nothing change
       "backgroundColor": "rgb(255,77,77)"
+    },
+    {
+      "text": "FIX:",
+      "color": "black",
+      "border": "2px solid #b0b020",
+      "backgroundColor": "#f4f41c"
+    },
+    {
+      "text": "TODO:",
+      "color": "black",
+      "border": "2px solid #ab7009",
+      "backgroundColor": "#f9af2c"
+    },
+    {
+      "text": "HELP:",
+      "color": "white",
+      "border": "2px solid #167199",
+      "backgroundColor": "#21b1f1"
     }
   ]
 }
