@@ -1,3 +1,19 @@
 {
-  "cSpell.words": ["nuxt", "nuxtjs", "tailwwinscss"]
+  "cSpell.words": ["nuxt", "nuxtjs", "tailwwinscss"],
+  "todohighlight.keywords": [
+    {
+      "text": "START:",
+      "color": "black",
+      "border": "2px solid green",
+      // "borderRadius": "1px", //NOTE: using borderRadius along with `border` or you will see nothing change
+      "backgroundColor": "#21d91c"
+    },
+    {
+      "text": "END:",
+      "color": "black",
+      "border": "2px solid rgb(255,25,25)",
+      // "borderRadius": "1px", //NOTE: using borderRadius along with `border` or you will see nothing change
+      "backgroundColor": "rgb(255,77,77)"
+    }
+  ]
 }
