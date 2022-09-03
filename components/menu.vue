@@ -5,13 +5,15 @@
       data="../assets/img/croche-3.svg"
       type="image/svg+xml"
       width="10%"
-      class="absolute top-[10%] right-[10%] rotate-12 opacity-50"
+      class="absolute top-[10%] right-[10%] rotate-12 opacity-50 z-10"
     ></object>
   </div>
   <!-- END: Background Music Notes -->
 
   <!-- START: Body -->
-  <div class="flex flex-col pt-20">
+  <div
+    class="flex flex-col pt-20 bg-gradient-to-br h-screen from-purple-100/80 via-red-100/80 to-orange-100/80"
+  >
     <!-- START: Title -->
     <h1 class="text-red-500 text-6xl mx-auto w-max">Songuessr</h1>
     <!-- END: Title -->
@@ -41,7 +43,7 @@
   </div>
   <!-- END: Body -->
 
-  <!-- <div class="text-align-cente">
+  <!-- <div class="text-align-center">
     <h1 class="text-red-400 text-5xl">Songuessr</h1>
     <br /><br />
     <p class="text-xl">The Song Clip Guessing Game</p>
