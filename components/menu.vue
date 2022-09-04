@@ -1,6 +1,7 @@
 <template>
   <!-- START: Background Music Notes -->
   <div id="music-notes">
+    <!-- FIX: assets not being deployed for production -->
     <object
       data="~/assets/img/croche-3.svg"
       type="image/svg+xml"
