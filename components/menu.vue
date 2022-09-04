@@ -15,7 +15,7 @@
     class="flex flex-col pt-20 bg-gradient-to-br h-screen from-purple-100/80 via-red-100/80 to-orange-100/80"
   >
     <!-- START: Title -->
-    <h1 class="text-red-500 text-6xl mx-auto w-max">Songuessr</h1>
+    <h1 class="text-red-500 text-7xl mx-auto w-max">Songuessr</h1>
     <!-- END: Title -->
 
     <!-- START: Menu Buttons -->
