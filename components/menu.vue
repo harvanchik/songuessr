@@ -2,7 +2,7 @@
   <!-- START: Background Music Notes -->
   <div id="music-notes">
     <object
-      data="../assets/img/croche-3.svg"
+      data="~/assets/img/croche-3.svg"
       type="image/svg+xml"
       width="10%"
       class="absolute top-[10%] right-[10%] rotate-12 opacity-50 z-10"
