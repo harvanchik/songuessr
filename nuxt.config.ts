@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
+  target: "static",
   modules: ["@nuxtjs/tailwindcss"],
   css: ["~/assets/css/tailwind.css"],
   // modules: ["@nuxt/content", tailwindModule],
