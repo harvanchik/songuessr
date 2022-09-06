@@ -9,6 +9,6 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.3.2",
-    "nuxt": "3.0.0-rc.8"
+    "nuxt": "3.0.0-rc.9"
   }
 }
