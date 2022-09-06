@@ -8,13 +8,4 @@ export default defineNuxtConfig({
   },
   target: "static",
   modules: ["@nuxtjs/tailwindcss"],
-  css: ["~/assets/css/tailwind.css"],
-  // modules: ["@nuxt/content", tailwindModule],
-  tailwindcss: {
-    exposeConfig: true,
-    injectPosition: "last",
-  },
-  content: {
-    documentDriven: true,
-  },
 });
