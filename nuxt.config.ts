@@ -8,4 +8,8 @@ export default defineNuxtConfig({
   },
   target: "static",
   modules: ["@nuxtjs/tailwindcss"],
+  tailwindcss: {
+    exposeConfig: true,
+    viewer: true,
+  },
 });
