@@ -19,7 +19,7 @@ jobs:
           cache: npm
           cache-dependency-path: "./package-lock.json"
       - run: npm install
-      - run: nuxt generate
+      - run: npm run generate
       - uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
