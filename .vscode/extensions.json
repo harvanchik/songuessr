@@ -10,7 +10,8 @@
     "christian-kohler.path-intellisense", // path intellisense
     "esbenp.prettier-vscode", // prettier extension needed for class sorting
     "jgclark.vscode-todo-highlight", // todo comment highlighting
-    "andrewmcodes.tailwindcss-extension-pack"
+    "andrewmcodes.tailwindcss-extension-pack", // tailwind css
+    "antfu.iconify" // iconify intellisense
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": [
