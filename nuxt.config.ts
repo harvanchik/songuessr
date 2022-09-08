@@ -6,9 +6,5 @@ export default defineNuxtConfig({
     shim: false,
   },
   target: "static",
-  modules: ["@nuxtjs/tailwindcss"],
-  tailwindcss: {
-    exposeConfig: true,
-    viewer: true,
-  },
+  modules: ["@nuxtjs/tailwindcss", "nuxt-icon"],
 });
