@@ -14,5 +14,8 @@
   },
   "keywords": [
     "songuessr"
-  ]
+  ],
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.2"
+  }
 }
