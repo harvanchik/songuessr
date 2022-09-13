@@ -12,10 +12,14 @@
     "nuxt": "3.0.0-rc.9",
     "nuxt-icon": "^0.1.5"
   },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.2",
+    "pinia": "^2.0.22"
+  },
+  "overrides": {
+    "vue": "3"
+  },
   "keywords": [
     "songuessr"
-  ],
-  "dependencies": {
-    "@pinia/nuxt": "^0.4.2"
-  }
+  ]
 }
