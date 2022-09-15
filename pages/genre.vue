@@ -27,6 +27,7 @@
             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX2Nc3B70tvx0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             <button id="alt" class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 
             uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1">Alternative / Indie</button>
+            <br><br>
         </div>
     </div>
 </template>
