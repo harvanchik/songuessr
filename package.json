@@ -20,6 +20,7 @@
   ],
   "dependencies": {
     "@pinia/nuxt": "^0.4.2",
+    "dotenv": "^16.0.2",
     "pinia": "^2.0.22"
   }
 }
