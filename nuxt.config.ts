@@ -8,3 +8,13 @@ export default defineNuxtConfig({
   target: "static",
   modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "nuxt-icon"],
 });
+
+document.getElementById("novice").onclick = function () {
+  location.href = "www.songuessr.com/genre";
+};
+document.getElementById("insane").onclick = function () {
+  location.href = "www.songuessr.com/genre";
+};
+document.getElementById("lightning").onclick = function () {
+  location.href = "www.songuessr.com/genre";
+};
