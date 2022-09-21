@@ -4,7 +4,7 @@
         <div class="flex flex-col mx-auto mt-20 space-y-5 text-5xl w-max">
             <h3 class="mx-auto text-5xl text-purple-400 w-max">Choose the Genre to Play</h3>
             <br>
-            <iframe src="https://open.spotify.com/embed/playlist/00KjsgI9t715OJFEUFziGJ" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/00KjsgI9t715OJFEUFziGJ" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
             </iframe>
             <button id="70" class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 
             uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1">70's Pop</button>
