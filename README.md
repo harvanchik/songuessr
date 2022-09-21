@@ -4,9 +4,10 @@
 
 This game has three different game modes to test how well someone's music knowledge is based off a 
 small clip of a random song. The user can choose from several different genres to test their knowledge
-and get scores to see how they do compared to their friends. 
+and get scores to see how they do compared to their friends. There are three different game modes, 
+each with their own separate methods for scoring, but they are all based off of 10 song clips per game. 
 
-### Game Modes
+### Game Modes:
 
 #### Novice
 
@@ -31,9 +32,12 @@ ends and you cannot record a time.
 
 ### Developers:
 
-Jake Harvanchik
-Carlos Garcia
-Ethan Stupin
+-Jake Harvanchik
+
+-Carlos Garcia
+
+-Ethan Stupin
+
 
 # Nuxt 3 Minimal Starter
 
