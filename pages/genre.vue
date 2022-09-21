@@ -1,7 +1,7 @@
 <template>
     <div class="bg-red-100">
         <h1 class="mx-auto text-red-500 text-7xl w-max">Songuessr</h1>
-        <div class="flex flex-col mx-auto mt-20 space-y-5 text-5xl w-max">
+        <div class="flex flex-col max-w-md mx-auto mt-20 space-y-5 text-5xl">
             <h3 class="mx-auto text-5xl text-purple-400 w-max">Genres</h3>
             <br>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/00KjsgI9t715OJFEUFziGJ" 
