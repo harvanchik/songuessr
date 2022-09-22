@@ -1,18 +1,12 @@
 <script>
 export default {
-  methods: {
-    logNovice() {
-      console.log("Clicked Novice");
-    },
-    logInsane() {
-      console.log("Clicked Insane");
-    },
-    logLightning() {
-      console.log("Clicked Lightning");
-    },
-  },
-};
-// END: log functions
+  async asyncData ({ store }) {
+    return {
+      var1: store.state.var1,
+      var2: store.state.var2
+    }
+  }
+}
 </script>
 
 <template>
@@ -27,6 +21,7 @@ export default {
       <nuxt-link to="/novice">
         <button
           id="novice"
+          var1="1"
           class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1 thing"
         >
           Novice
@@ -35,6 +30,7 @@ export default {
       <nuxt-link to="/insane">
         <button
           id="insane"
+          var1="2"
           class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 thing"
         >
           Insane
@@ -43,6 +39,7 @@ export default {
       <nuxt-link to="/lightning">
         <button
           id="lightning"
+          var1="3"
           class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 thing"
         >
           Lightning

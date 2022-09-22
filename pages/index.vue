@@ -13,10 +13,12 @@
   })
 
   export const mutations = {
+    // Stores the difficulty for the game
     SET_VAR_1 (state, value) {
       console.log('SET_VAR_1', value)
       state.var1 = value
     },
+    // Stores the genre for the game
     SET_VAR_2 (state, value) {
       console.log('SET_VAR_2', value)
       state.var2 = value

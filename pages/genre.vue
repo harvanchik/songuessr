@@ -1,3 +1,14 @@
+<script>
+    export default {
+      async asyncData ({ store }) {
+        return {
+          var1: store.state.var1,
+          var2: store.state.var2
+        }
+      }
+    }
+</script>
+
 <template>
   <div class="bg-red-100">
     <h1 class="mx-auto text-red-500 text-7xl w-max">Songuessr</h1>
@@ -17,6 +28,7 @@
       </iframe>
       <button
         id="70"
+        var2="70"
         class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
       >
         70's Pop
@@ -34,6 +46,7 @@
       ></iframe>
       <button
         id="80"
+        var2="80"
         class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
       >
         80's Pop
@@ -51,6 +64,7 @@
       ></iframe>
       <button
         id="90"
+        var2="90"
         class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
       >
         90's Pop
@@ -68,6 +82,7 @@
       ></iframe>
       <button
         id="00"
+        var2="00"
         class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
       >
         00's Pop
@@ -85,6 +100,7 @@
       ></iframe>
       <button
         id="country"
+        var2="country"
         class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
       >
         Country
@@ -102,6 +118,7 @@
       ></iframe>
       <button
         id="rnr"
+        var2="rnr"
         class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
       >
         Rock and Roll
@@ -119,6 +136,7 @@
       ></iframe>
       <button
         id="hh"
+        var2="hh"
         class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
       >
         Hip Hop
@@ -136,6 +154,7 @@
       ></iframe>
       <button
         id="alt"
+        var2="alt"
         class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
       >
         Alternative / Indie
