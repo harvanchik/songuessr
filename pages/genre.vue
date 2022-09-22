@@ -10,10 +10,10 @@
 </script>
 
 <template>
-  <div class="bg-red-100">
-    <h1 class="mx-auto text-red-500 text-7xl w-max">Songuessr</h1>
+  <div class="pt-20 pb-20 bg-red-100">
+    <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
     <div class="flex flex-col max-w-md mx-auto mt-20 space-y-5 text-5xl">
-      <h3 class="mx-auto text-5xl text-purple-400 w-max">Genres</h3>
+      <h3 class="mx-auto text-5xl text-black w-max">Genres</h3>
       <br />
       <iframe
         style="border-radius: 12px"
@@ -29,7 +29,7 @@
       <button
         id="70"
         var2="70"
-        class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
+        class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
       >
         70's Pop
       </button>
@@ -47,7 +47,7 @@
       <button
         id="80"
         var2="80"
-        class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
+        class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
       >
         80's Pop
       </button>
@@ -65,7 +65,7 @@
       <button
         id="90"
         var2="90"
-        class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
+        class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
       >
         90's Pop
       </button>
@@ -83,7 +83,7 @@
       <button
         id="00"
         var2="00"
-        class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
+        class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
       >
         00's Pop
       </button>
@@ -101,7 +101,7 @@
       <button
         id="country"
         var2="country"
-        class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
+        class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
       >
         Country
       </button>
@@ -119,7 +119,7 @@
       <button
         id="rnr"
         var2="rnr"
-        class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
+        class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
       >
         Rock and Roll
       </button>
@@ -137,7 +137,7 @@
       <button
         id="hh"
         var2="hh"
-        class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
+        class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
       >
         Hip Hop
       </button>
@@ -155,7 +155,7 @@
       <button
         id="alt"
         var2="alt"
-        class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
+        class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
       >
         Alternative / Indie
       </button>
@@ -163,7 +163,7 @@
       <nuxt-link to="/">
         <button
           id="alt"
-          class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1"
+          class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
         >
           Go Back
         </button>
