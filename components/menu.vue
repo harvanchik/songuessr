@@ -1,12 +1,13 @@
-<script>
-export default {
-  async asyncData ({ store }) {
-    return {
-      var1: store.state.var1,
-      var2: store.state.var2
-    }
-  }
-}
+<script setup lang="ts">
+const { difficulty, setDifficulty } = useDifficulty();
+// export default {
+//   async asyncData ({ store }) {
+//     return {
+//       var1: store.state.var1,
+//       var2: store.state.var2
+//     }
+//   }
+// }
 </script>
 
 <template>
@@ -14,6 +15,7 @@ export default {
   <div class="flex flex-col h-screen pt-20 bg-red-100">
     <!-- START: Title -->
     <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
+    <h2>{{ difficulty }}</h2>
     <!-- END: Title -->
 
     <!-- START: Menu Buttons -->
@@ -22,6 +24,7 @@ export default {
         <button
           id="novice"
           var1="1"
+          @click="setDifficulty("novice")"
           class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1 thing"
         >
           Novice
