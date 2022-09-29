@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-full pt-20 pb-20 bg-red-100 paddin">
+  <div class="flex flex-col min-h-screen pt-20 pb-20 bg-red-100">
     <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
     <div class="flex flex-col max-w-md mx-auto mt-20 space-y-5 text-5xl">
       <h3 class="mx-auto text-5xl text-purple-400 w-max">Insane Mode Rules</h3>
