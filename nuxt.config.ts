@@ -6,8 +6,8 @@ export default defineNuxtConfig({
     shim: false,
   },
   target: "static",
-  meta: {
-    title: "songuessr",
-  },
+  // meta: {
+  //   title: "songuessr",
+  // },
   modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "nuxt-icon"],
 });

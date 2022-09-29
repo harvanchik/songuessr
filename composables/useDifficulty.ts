@@ -1,5 +1,5 @@
 const useDifficulty = () => {
-  const difficulty = useState("difficulty", () => "insane");
+  const difficulty = useState("difficulty", () => null);
 
   const setDifficulty = (val: string) => {
     difficulty.value = val;
