@@ -1,1 +1,1 @@
-export default {data:{},state:{},prerenderedAt:1663883354869}
+export default {data:{},state:{$sdifficulty:"insane"},prerenderedAt:1664478354649}
