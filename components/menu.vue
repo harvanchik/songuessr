@@ -1,13 +1,5 @@
 <script setup lang="ts">
 const { difficulty, setDifficulty } = useDifficulty();
-// export default {
-//   async asyncData ({ store }) {
-//     return {
-//       var1: store.state.var1,
-//       var2: store.state.var2
-//     }
-//   }
-// }
 </script>
 
 <template>
@@ -15,7 +7,6 @@ const { difficulty, setDifficulty } = useDifficulty();
   <div class="flex flex-col h-screen pt-20 bg-red-100">
     <!-- START: Title -->
     <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
-    <h2>{{ difficulty }}</h2>
     <!-- END: Title -->
 
     <!-- START: Menu Buttons -->
