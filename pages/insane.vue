@@ -5,8 +5,8 @@
       <h3 class="mx-auto text-5xl text-purple-400 w-max">Insane Mode Rules</h3>
       <!-- TODO: Type out the rules of the game mode -->
       <p class="p-5 text-lg text-black bg-purple-400 rounded-lg">
-        Hardcore players that are attempting speedruns and high score
-        leaderboards will choose the insane mode. This mode gives score
+        Hardcore players that are attempting speedruns and high score on the
+        leaderboard will choose the insane mode. This mode gives score
         multipliers through the duration of the guess, so the faster the guess
         the higher the score. It also has a text box, so the user would have to
         know the name of the song exactly to get it correct. A correct answer is
