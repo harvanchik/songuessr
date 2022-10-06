@@ -5,6 +5,10 @@ const useDifficulty = () => {
     difficulty.value = val;
   };
 
+  const getDifficulty = () => {
+    return difficulty.value;
+  };
+
   return {
     difficulty,
     setDifficulty,
