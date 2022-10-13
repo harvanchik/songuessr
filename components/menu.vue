@@ -11,7 +11,7 @@ const { difficulty, setDifficulty } = useDifficulty();
 
     <!-- START: Menu Buttons -->
     <div class="flex flex-col mx-auto mt-20 space-y-5 text-5xl w-max">
-      <nuxt-link to="/novice">
+      <nuxt-link to="/info">
         <button
           id="novice"
           var1="1"
@@ -21,7 +21,7 @@ const { difficulty, setDifficulty } = useDifficulty();
           Novice
         </button>
       </nuxt-link>
-      <nuxt-link to="/insane">
+      <nuxt-link to="/info">
         <button
           id="insane"
           var1="2"
@@ -31,7 +31,7 @@ const { difficulty, setDifficulty } = useDifficulty();
           Insane
         </button>
       </nuxt-link>
-      <nuxt-link to="/lightning">
+      <nuxt-link to="/info">
         <button
           id="lightning"
           var1="3"
