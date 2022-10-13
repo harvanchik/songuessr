@@ -10,7 +10,7 @@ const useGenre = () => {
   };
 
   return {
-    Genre: genre,
+    genre: genre,
     setGenre,
   };
 };
