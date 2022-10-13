@@ -2,15 +2,17 @@
   <div class="flex flex-col min-h-screen pt-20 pb-20 bg-red-100">
     <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
     <div class="flex flex-col max-w-md mx-auto mt-20 space-y-5 text-5xl">
+
+      <!-- TODO: Make the colors change for each game mode -->
       <h3 class="mx-auto text-5xl text-green-600 capitalize w-max">
         {{ difficulty }} Mode Rules
       </h3>
-      <!-- TODO: Type out the rules of the game mode -->
       <p class="p-5 text-lg text-black bg-green-600 rounded-lg">
         {{ getDescription() }}
       </p>
       <br />
-      <!-- END: rules -->
+      <!-- END: colors -->
+      
       <nuxt-link to="/genre">
         <button
           id="70"
@@ -35,6 +37,7 @@
 
 <script setup lang="ts">
 const { difficulty } = useDifficulty();
+const { genre } = useGenre();
 // method to get description of game mode
 const getDescription = () => {
   switch (difficulty.value) {
@@ -65,7 +68,7 @@ const getDescription = () => {
 useHead({
   // set tab title and include current difficulty
   titleTemplate: () => {
-    return "songuessr - " + difficulty.value;
+    return "songuessr - " + difficulty.value + " - " + genre.value;
   },
 });
 </script>
