@@ -20,6 +20,7 @@
       <nuxt-link to="/game">
       <button
         id="70"
+        @click="setGenre('70')"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         70's Pop
@@ -41,6 +42,7 @@
       <nuxt-link to="/game">
       <button
         id="80"
+        @click="setGenre('80')"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         80's Pop
@@ -62,6 +64,7 @@
       <nuxt-link to="/game">
       <button
         id="90"
+        @click="setGenre('90')"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         90's Pop
@@ -83,6 +86,7 @@
       <nuxt-link to="/game">
       <button
         id="00"
+        @click="setGenre('00')"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         00's Pop
@@ -104,6 +108,7 @@
       <nuxt-link to="/game">
       <button
         id="country"
+        @click="setGenre('country')"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Country
@@ -125,6 +130,7 @@
       <nuxt-link to="/game">
       <button
         id="rnr"
+        @click="setGenre('rnr')"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Rock and Roll
@@ -146,6 +152,7 @@
       <nuxt-link to="/game">
       <button
         id="hh"
+        @click="setGenre('hh')"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Hip Hop
@@ -167,6 +174,7 @@
       <nuxt-link to="/game">
       <button
         id="alt"
+        @click="setGenre('alt')"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Alternative / Indie
@@ -175,15 +183,53 @@
       </nuxt-link>
 
       <!-- Return to the home page -->
-      <nuxt-link to="/">
+      <nuxt-link to="/info">
         <button
-          id="alt"
           class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
         >
-          Home
+          Go Back
         </button>
       </nuxt-link>
       <br />
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const { difficulty } = useDifficulty();
+const { genre, setGenre } = useGenre();
+const getDifficulty = () => {
+  switch (difficulty.value) {
+    case "novice":
+      return `text-green-600`;
+    case "insane":
+      return `text-purple-600`;
+    case "lightning":
+      return `text-blue-600`;
+    default:
+      return `text-white`;
+  }
+};
+const getGenre = () => {
+  switch (genre.value) {
+    case "00":
+      return `00's Pop`;
+    case "country":
+      return `Country`;
+    case "rnr":
+      return `Rock and Roll`;
+    case "hh":
+      return `Hip Hop`;
+    case "alt":
+      return `Alternative / Indie`;
+    default:
+      return `No genre has been selected`;
+  }
+};
+useHead({
+  // set tab title and include current difficulty
+  titleTemplate: () => {
+    return "Difficulty: " + difficulty.value + " Genre: " + genre.value + " | Songuessr";
+  },
+});
+</script>
