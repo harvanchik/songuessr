@@ -10,6 +10,7 @@
 
         <!-- TODO: Make each option's name to the name of a song in the playlist -->
         <!--    Also make one of the options the correct option and add to the score if selected -->
+        <div class="novice-buttons" v-if="difficulty === 'novice'">
         <nuxt-link to="/game">
           <button
             id="option1"
@@ -49,6 +50,23 @@
           </button>
           <br />
         </nuxt-link>
+        </div>
+
+        <div class="expert-buttons" v-if="difficulty === 'insane' || difficulty === 'lightning'">
+        <input
+          id="textInput"
+          class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 border-2 border-purple-600 mb-5"
+        />
+        <nuxt-link to="/game">
+          <button
+            id="enterText"
+            class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1"
+          >
+            Enter
+          </button>
+          <br />
+        </nuxt-link>
+        </div>
         <!-- END: options -->
 
         <nuxt-link to="/">
@@ -63,3 +81,38 @@
       </div>
     </div>
   </template>
+
+<script setup lang="ts">
+// export default {
+//   data() {
+//     return {
+//       buttons: true,
+//       textBox: false
+//     }
+//   }
+// };
+const { difficulty } = useDifficulty();
+const { buttons, textBox } = useDifficulty();
+const { genre } = useGenre();
+// const getDifficulty = () => {
+//   switch (difficulty.value) {
+//     case "novice":
+//       buttons = true;
+//       textBox = false;
+//     case "insane":
+//       buttons = false;
+//       textBox = true;
+//     case "lightning":
+//       buttons = false;
+//       textBox = true;
+//     default:
+//       return `No description found for this difficulty`;
+//   }
+// };
+useHead({
+  // set tab title and include current difficulty
+  titleTemplate: () => {
+    return "Difficulty: " + difficulty.value + " Genre: " + genre.value + " | Songuessr";
+  },
+});
+</script>
