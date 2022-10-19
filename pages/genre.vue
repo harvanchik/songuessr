@@ -1,8 +1,8 @@
 <template>
   <div class="pt-20 pb-20 bg-red-100">
     <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
-    <div class="flex flex-col max-w-md mx-auto mt-20 space-y-5 text-5xl">
-      <h3 class="mx-auto text-5xl text-black w-max">Genres</h3>
+    <div class="flex flex-col max-w-md mx-auto space-y-5 text-5xl">
+      <h3 class="mx-auto mt-3 text-5xl text-purple-500 w-max">Genres</h3>
       <br />
 
       <!-- 70's Option -->
@@ -185,12 +185,13 @@
       <!-- Return to the home page -->
       <nuxt-link to="/info">
         <button
-          class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
+          class="duration-250 mx-auto w-full rounded bg-red-200 py-2 px-5 uppercase text-red-600 transition-[colors,transform] hover:scale-105 hover:bg-red-300 hover:bg-gradient-to-r hover:from-red-200 hover:to-red-400 hover:text-red-700 active:tranpurple-y-1"
         >
-          Go Back
+          Back
         </button>
       </nuxt-link>
       <br />
+      
     </div>
   </div>
 </template>
@@ -198,34 +199,6 @@
 <script setup lang="ts">
 const { difficulty } = useDifficulty();
 const { genre, setGenre } = useGenre();
-const getDifficulty = () => {
-  switch (difficulty.value) {
-    case "novice":
-      return `text-green-600`;
-    case "insane":
-      return `text-purple-600`;
-    case "lightning":
-      return `text-blue-600`;
-    default:
-      return `text-white`;
-  }
-};
-const getGenre = () => {
-  switch (genre.value) {
-    case "00":
-      return `00's Pop`;
-    case "country":
-      return `Country`;
-    case "rnr":
-      return `Rock and Roll`;
-    case "hh":
-      return `Hip Hop`;
-    case "alt":
-      return `Alternative / Indie`;
-    default:
-      return `No genre has been selected`;
-  }
-};
 useHead({
   // set tab title and include current difficulty
   titleTemplate: () => {

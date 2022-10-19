@@ -1,29 +1,52 @@
 <template>
   <div class="flex flex-col min-h-screen pt-20 pb-20 bg-red-100">
     <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
-    <div class="flex flex-col max-w-md mx-auto mt-20 space-y-5 text-5xl">
+    <div class="flex flex-col max-w-md mx-auto space-y-5 text-5xl">
 
-      <!-- TODO: Make the colors change for each game mode -->
-      <h3 class="mx-auto text-5xl text-black {{ getDifficulty() }} capitalize w-max">
-        {{ difficulty }} Mode Rules
-      </h3>
-      <p class="p-5 text-lg bg-white {{ getDifficulty() }} rounded-lg">
-        {{ getDescription() }}
-      </p>
-      <br />
-      <!-- END: colors -->
+      <!-- Green if Novice -->
+      <div class="novice-info" v-if="difficulty === 'novice'">
+        <h3 class="mx-auto mt-3 mb-10 text-5xl text-green-500 capitalize w-max">
+          {{ difficulty }} Mode Rules
+        </h3>
+        <p class="p-5 mb-10 text-lg bg-green-200 rounded-lg">
+          {{ getDescription() }}
+        </p>
+      </div>
+
+      <!-- Purple if Insane -->
+      <div class="insane-info" v-if="difficulty === 'insane'">
+        <h3 class="mx-auto mt-3 mb-10 text-5xl text-purple-500 capitalize w-max">
+          {{ difficulty }} Mode Rules
+        </h3>
+        <p class="p-5 mb-10 text-lg bg-purple-200 rounded-lg">
+          {{ getDescription() }}
+        </p>
+      </div>
+
+      <!-- Blue if Lightning -->
+      <div class="lightning-info" v-if="difficulty === 'lightning'">
+        <h3 class="mx-auto mt-3 mb-10 text-5xl text-blue-500 capitalize w-max">
+          {{ difficulty }} Mode Rules
+        </h3>
+        <p class="p-5 mb-10 text-lg bg-blue-200 rounded-lg">
+          {{ getDescription() }}
+        </p>
+      </div>
       
+      <!-- Move to Genres Screen -->
       <nuxt-link to="/genre">
         <button
-          class="duration-250 mx-auto w-full rounded bg-white py-2 px-5 uppercase text-black transition-[colors,transform] hover:scale-105 hover:bg-white300 hover:bg-gradient-to-r hover:from-white hover:to-white400 hover:text-white700 active:translate-y-1"
+          class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-500 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1"
         >
           Genres
         </button>
         <br />
       </nuxt-link>
+
+      <!-- Exit to Home Page -->
       <nuxt-link to="/">
         <button
-          class="duration-250 mx-auto w-full rounded bg-white py-2 px-5 uppercase text-black transition-[colors,transform] hover:scale-105 hover:bg-white300 hover:bg-gradient-to-r hover:from-white hover:to-white400 hover:text-white700 active:translate-y-1"
+          class="duration-250 mx-auto w-full rounded bg-red-200 py-2 px-5 uppercase text-red-500 transition-[colors,transform] hover:scale-105 hover:bg-red-300 hover:bg-gradient-to-r hover:from-red-200 hover:to-red-400 hover:text-red-700 active:translate-y-1"
         >
           Back
         </button>
@@ -61,18 +84,6 @@ const getDescription = () => {
         guesses are incorrect, your game ends and you cannot record a time.`;
     default:
       return `No description found for this difficulty`;
-  }
-};
-const getDifficulty = () => {
-  switch (difficulty.value) {
-    case "novice":
-      return `text-green-600`;
-    case "insane":
-      return `text-purple-600`;
-    case "lightning":
-      return `text-blue-600`;
-    default:
-      return `text-white`;
   }
 };
 useHead({
