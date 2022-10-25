@@ -1,7 +1,8 @@
 const useScore = () => {
   const score = useState("score", () => null);
   const time = useState("time", () => null);
-  score.value = 0;
+  // score.value = 0;
+  // time.value = 0;
 
   const setScore = (val: number) => {
     score.value = val;
@@ -15,7 +16,8 @@ const useScore = () => {
     return score.value;
   };
 
-//   make a timer that adds 1 to score every 1 second if the mode is lightning
+// make a timer that adds 1 to score every 1 second if the mode is lightning
+// **the if statement doesnt work since difficulty is not passed through
   const timer = () => {
     if (difficulty.value === "lightning") {
       setInterval(() => {
