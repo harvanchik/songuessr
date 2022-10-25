@@ -1,1 +1,0 @@
-import{f as s}from"./entry.2d7e2dbd.js";const f=()=>{const e=s("difficulty",()=>null);return{difficulty:e,setDifficulty:t=>{e.value=t}}},r=()=>{const e=s("genre",()=>null);return{genre:e,setGenre:t=>{e.value=t}}};export{r as a,f as u};
