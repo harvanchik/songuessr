@@ -1,3 +1,15 @@
+<script setup lang="ts">
+const { difficulty } = useDifficulty();
+const { genre, setGenre } = useGenre();
+useHead({
+  // set tab title and include current difficulty
+  titleTemplate: () => {
+    return "Difficulty: " + difficulty.value + " Genre: " + genre.value + " | Songuessr";
+  },
+});
+</script>
+
+
 <template>
   <div class="pt-20 pb-20 bg-red-100">
     <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
@@ -196,13 +208,3 @@
   </div>
 </template>
 
-<script setup lang="ts">
-const { difficulty } = useDifficulty();
-const { genre, setGenre } = useGenre();
-useHead({
-  // set tab title and include current difficulty
-  titleTemplate: () => {
-    return "Difficulty: " + difficulty.value + " Genre: " + genre.value + " | Songuessr";
-  },
-});
-</script>

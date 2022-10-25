@@ -1,9 +1,3 @@
-<template>
-  <div>
-    <Menu></Menu>
-  </div>
-</template>
-
 <script setup lang="ts">
 const { difficulty } = useDifficulty();
 const { genre } = useGenre();
@@ -14,3 +8,11 @@ useHead({
   },
 });
 </script>
+
+
+<template>
+  <div>
+    <Menu></Menu>
+  </div>
+</template>
+
