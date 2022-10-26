@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const { difficulty } = useDifficulty();
-const { genre } = useGenre();
-const { score, time } = useScore();
+const { score, time, addScore, resetScore } = useScore();
 
 // get the score or time to show on the page
 const showScore = () => {
@@ -15,7 +14,7 @@ const showScore = () => {
 useHead({
   // set tab title and include current difficulty
   titleTemplate: () => {
-    return "Difficulty: " + difficulty.value + " Genre: " + genre.value + " | Songuessr";
+    return "Time: " + time.value + " Score: " + score.value + " | Songuessr";
   },
 });
 </script>
@@ -45,8 +44,8 @@ useHead({
       <nuxt-link to="/game">
         <button
           id="option1"
+          @click="addScore(1)"
           class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 mb-5"
-          @click="useScore(addScore(1))"
         >
           Correct
         </button>
@@ -93,8 +92,8 @@ useHead({
       <nuxt-link to="/game">
         <button
           id="enterText"
+          @click="addScore(1)"
           class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
-          @click="useScore(addScore(1))"
         >
           Enter
         </button>
@@ -108,7 +107,7 @@ useHead({
         <button
           id="exit"
           class="duration-250 mx-auto w-full rounded bg-red-200 py-2 px-5 uppercase text-red-600 transition-[colors,transform] hover:scale-105 hover:bg-red-300 hover:bg-gradient-to-r hover:from-red-200 hover:to-red-400 hover:text-red-700 active:translate-y-1"
-          @click="useScore(setScore(0))"
+          @click="resetScore()"
         >
           Exit
         </button>
