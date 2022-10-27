@@ -1,3 +1,15 @@
+<script setup lang="ts">
+const { setGenre } = useGenre();
+const { score, time, resetScore } = useScore();
+useHead({
+  // set tab title and include current difficulty
+  titleTemplate: () => {
+    return "Time: " + time.value + " Score: " + score.value + " | Songuessr";
+  },
+});
+</script>
+
+
 <template>
   <div class="pt-20 pb-20 bg-red-100">
     <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
@@ -20,7 +32,7 @@
       <nuxt-link to="/game">
       <button
         id="70"
-        @click="setGenre('70')"
+        @click="setGenre('70'), resetScore()"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         70's Pop
@@ -42,7 +54,7 @@
       <nuxt-link to="/game">
       <button
         id="80"
-        @click="setGenre('80')"
+        @click="setGenre('80'), resetScore()"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         80's Pop
@@ -64,7 +76,7 @@
       <nuxt-link to="/game">
       <button
         id="90"
-        @click="setGenre('90')"
+        @click="setGenre('90'), resetScore()"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         90's Pop
@@ -86,7 +98,7 @@
       <nuxt-link to="/game">
       <button
         id="00"
-        @click="setGenre('00')"
+        @click="setGenre('00'), resetScore()"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         00's Pop
@@ -108,7 +120,7 @@
       <nuxt-link to="/game">
       <button
         id="country"
-        @click="setGenre('country')"
+        @click="setGenre('country'), resetScore()"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Country
@@ -130,7 +142,7 @@
       <nuxt-link to="/game">
       <button
         id="rnr"
-        @click="setGenre('rnr')"
+        @click="setGenre('rnr'), resetScore()"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Rock and Roll
@@ -152,7 +164,7 @@
       <nuxt-link to="/game">
       <button
         id="hh"
-        @click="setGenre('hh')"
+        @click="setGenre('hh'), resetScore()"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Hip Hop
@@ -174,7 +186,7 @@
       <nuxt-link to="/game">
       <button
         id="alt"
-        @click="setGenre('alt')"
+        @click="setGenre('alt'), resetScore()"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Alternative / Indie
@@ -196,13 +208,3 @@
   </div>
 </template>
 
-<script setup lang="ts">
-const { difficulty } = useDifficulty();
-const { genre, setGenre } = useGenre();
-useHead({
-  // set tab title and include current difficulty
-  titleTemplate: () => {
-    return "Difficulty: " + difficulty.value + " Genre: " + genre.value + " | Songuessr";
-  },
-});
-</script>
