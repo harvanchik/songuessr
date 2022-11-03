@@ -1,1 +1,0 @@
-import{f as r}from"./entry.41fe9861.js";const m=()=>{const t=r("score",()=>null),s=r("time",()=>null),o=e=>{t.value=e},c=e=>{t.value+=e},n=()=>{o(0),l(0)},l=e=>{u(),s.value=e};let u=()=>{setInterval(()=>{s.value++},1e3)};return{score:t,time:s,setScore:o,addScore:c,resetScore:n}};export{m as u};
