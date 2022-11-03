@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { difficulty } = useDifficulty();
-const { score, time, addScore, resetScore } = useScore();
+const { score, time, addScore, resetScore, setState } = useScore();
 
 // get the score or time to show on the page
 const showScore = () => {
@@ -11,12 +11,26 @@ const showScore = () => {
     return time.value;
   }
 };
+
+// set tab title and include current difficulty
 useHead({
-  // set tab title and include current difficulty
   titleTemplate: () => {
     return "Time: " + time.value + " Score: " + score.value + " | Songuessr";
   },
 });
+
+// Code to setup the vue-youtube component
+const videoId = ref('lG0Ys-2d4MA');
+const youtube = ref(null);
+const playVideo = () => {
+  player().playVideo()
+};
+const playing = () => {
+  console.log('Video is being played')
+};
+const player = () => {
+  return youtube.player
+};
 </script>
 
 
@@ -34,6 +48,8 @@ useHead({
       
       <!-- TODO: Implement Spotify playback API to run a song clip here -->
       <p class="p-5 mx-auto text-lg text-black bg-white rounded-lg">-- Song Clip Player --</p>
+      <youtube :video-id="videoId" ref="youtube" @playing="playing"></youtube>
+      <button @click="playVideo">Play</button>
       <br />
       <!-- END: Spotify API -->
 
@@ -107,7 +123,7 @@ useHead({
         <button
           id="exit"
           class="duration-250 mx-auto w-full rounded bg-red-200 py-2 px-5 uppercase text-red-600 transition-[colors,transform] hover:scale-105 hover:bg-red-300 hover:bg-gradient-to-r hover:from-red-200 hover:to-red-400 hover:text-red-700 active:translate-y-1"
-          @click="resetScore()"
+          @click="resetScore(), setState(false)"
         >
           Exit
         </button>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { setGenre } = useGenre();
-const { score, time, resetScore } = useScore();
+const { score, time, resetScore, setState } = useScore();
 useHead({
   // set tab title and include current difficulty
   titleTemplate: () => {
@@ -32,7 +32,7 @@ useHead({
       <nuxt-link to="/game">
       <button
         id="70"
-        @click="setGenre('70'), resetScore()"
+        @click="setGenre('70'), resetScore(), setState(true)"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         70's Pop
@@ -54,7 +54,7 @@ useHead({
       <nuxt-link to="/game">
       <button
         id="80"
-        @click="setGenre('80'), resetScore()"
+        @click="setGenre('80'), resetScore(), setState(true)"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         80's Pop
@@ -76,7 +76,7 @@ useHead({
       <nuxt-link to="/game">
       <button
         id="90"
-        @click="setGenre('90'), resetScore()"
+        @click="setGenre('90'), resetScore(), setState(true)"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         90's Pop
@@ -98,7 +98,7 @@ useHead({
       <nuxt-link to="/game">
       <button
         id="00"
-        @click="setGenre('00'), resetScore()"
+        @click="setGenre('00'), resetScore(), setState(true)"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         00's Pop
@@ -120,7 +120,7 @@ useHead({
       <nuxt-link to="/game">
       <button
         id="country"
-        @click="setGenre('country'), resetScore()"
+        @click="setGenre('country'), resetScore(), setState(true)"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Country
@@ -142,7 +142,7 @@ useHead({
       <nuxt-link to="/game">
       <button
         id="rnr"
-        @click="setGenre('rnr'), resetScore()"
+        @click="setGenre('rnr'), resetScore(), setState(true)"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Rock and Roll
@@ -164,7 +164,7 @@ useHead({
       <nuxt-link to="/game">
       <button
         id="hh"
-        @click="setGenre('hh'), resetScore()"
+        @click="setGenre('hh'), resetScore(), setState(true)"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Hip Hop
@@ -186,7 +186,7 @@ useHead({
       <nuxt-link to="/game">
       <button
         id="alt"
-        @click="setGenre('alt'), resetScore()"
+        @click="setGenre('alt'), resetScore(), setState(true)"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Alternative / Indie

@@ -21,6 +21,7 @@
   "dependencies": {
     "@pinia/nuxt": "^0.4.2",
     "dotenv": "^16.0.3",
-    "pinia": "^2.0.22"
+    "pinia": "^2.0.22",
+    "vue-youtube": "^1.4.0"
   }
 }
