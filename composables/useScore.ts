@@ -1,6 +1,7 @@
 const useScore = () => {
   const score = useState("score", () => null);
   const time = useState("time", () => null);
+  const round = useState("round", () => 0);
   const started = useState("started", () => false);
   let interval: any = null;
 
@@ -28,6 +29,7 @@ const useScore = () => {
     clearInterval(interval);
     setScore(0);
     setTime(0);
+    setRound(1);
     setState(false);
   };
 
@@ -41,7 +43,28 @@ const useScore = () => {
     // If the game hasn't started, stop the timer and reset the score
     if (!started) {
       resetScore();
-      interval = null;
+      interval = clearInterval(interval);
+    }
+  };
+
+  const getState = () => {
+    return started.value;
+  };
+
+  const setRound = (val: number) => {
+    round.value = val;
+  };
+
+  const getRound = () => {
+    return round.value;
+  };
+
+  const addRound = (val: number) => {
+    if (round.value < 10) {
+      round.value += val;
+    }
+    else {
+      resetScore();
     }
   };
 
@@ -64,12 +87,12 @@ const useScore = () => {
   return {
     score,
     time,
+    round,
     setScore,
     addScore,
     resetScore,
-    // startTimer,
     setState,
-    // checkState,
+    addRound
   };
 };
 
