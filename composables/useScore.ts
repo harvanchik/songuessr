@@ -2,6 +2,8 @@ const useScore = () => {
   const score = useState("score", () => null);
   const time = useState("time", () => null);
   const round = useState("round", () => 0);
+  const songG = useState("songG", () => 0);
+  const songU = useState("songU", () => 0);
   const started = useState("started", () => false);
   let interval: any = null;
 
@@ -30,6 +32,7 @@ const useScore = () => {
     setScore(0);
     setTime(0);
     setRound(1);
+    setSong();
     setState(false);
   };
 
@@ -68,31 +71,48 @@ const useScore = () => {
     }
   };
 
-  // // checks if the timer is already running or not
-  // const checkState = () => {
-  //   return started.value;
-  // };
+  const setSong = () => {
+    songG.value = Math.floor(Math.random() * 4) + 1;
+  };
 
-  // // this function runs the timer
-  // const startTimer = () =>  {
-  //   interval = setInterval(() => { time.value += 1; }, 1000)
-  // }
+  const getSong = () => {
+    return songG.value;
+  };
 
-  // // this function stops the timer
-  // const stopTimer = () => {
-  //   clearInterval(interval);
-  // }
+  const resetSong = () => {
+    setSong();
+  };
+
+  const setAnswer = (val: number) => {
+    songU.value = val;
+    if (songU.value === songG.value) {
+      addScore(1);
+    }
+    else {
+      // tell the console that the answer is wrong
+      console.log("You put " + songU.value + " but the answer was " + songG.value);
+    }
+  };
+
+  const getAnswer = () => {
+    return songU.value;
+  };
 
 // return the values to the main component
   return {
     score,
     time,
     round,
+    songG,
+    songU,
     setScore,
-    addScore,
     resetScore,
+    resetSong,
+    addScore,
+    addRound,
     setState,
-    addRound
+    setSong,
+    setAnswer
   };
 };
 
