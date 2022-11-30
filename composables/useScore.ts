@@ -32,6 +32,7 @@ const useScore = () => {
     setScore(0);
     setTime(0);
     setRound(1);
+    setSong();
     setState(false);
   };
 
@@ -78,6 +79,10 @@ const useScore = () => {
     return songG.value;
   };
 
+  const resetSong = () => {
+    setSong();
+  };
+
   const setAnswer = (val: number) => {
     songU.value = val;
     if (songU.value === songG.value) {
@@ -102,6 +107,7 @@ const useScore = () => {
     songU,
     setScore,
     resetScore,
+    resetSong,
     addScore,
     addRound,
     setState,

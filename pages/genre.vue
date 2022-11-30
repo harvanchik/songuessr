@@ -27,7 +27,7 @@ useHead({
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
         loading="lazy"
       ></iframe>
-      <nuxt-link to="/game">
+      <nuxt-link to="/game-rock">
       <button
         id="rnr"
         @click="setGenre('rnr'), resetScore(), setState(true), setSong()"
@@ -48,7 +48,7 @@ useHead({
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       ></iframe>
-      <nuxt-link to="/game">
+      <nuxt-link to="/game-80s">
       <button
         id="80"
         @click="setGenre('80'), resetScore(), setState(true), setSong()"
@@ -69,7 +69,7 @@ useHead({
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       ></iframe>
-      <nuxt-link to="/game">
+      <nuxt-link to="/game-hip-hop">
       <button
         id="hh"
         @click="setGenre('hh'), resetScore(), setState(true), setSong()"
@@ -90,7 +90,7 @@ useHead({
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       ></iframe>
-      <nuxt-link to="/game">
+      <nuxt-link to="/game-indie">
       <button
         id="alt"
         @click="setGenre('alt'), resetScore(), setState(true), setSong()"
@@ -110,7 +110,7 @@ useHead({
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       ></iframe>
-      <nuxt-link to="/game">
+      <nuxt-link to="/game-country">
       <button
         id="country"
         @click="setGenre('country'), resetScore(), setState(true), setSong()"
