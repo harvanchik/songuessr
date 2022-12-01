@@ -46,7 +46,7 @@ useHead({
 
     <!-- START: Hip Hop songs -->
     <!-- START: Round 1 -->
-    <div v-if="round === 1 && genre === 'hh'">
+    <div v-if="round === 1 && genre === 'hiphop'">
       <!-- Random songs to choose from round 1 -->
       <div v-if="songG === 1">
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2qOm7ukLyHUXWyR4ZWLwxA?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -98,7 +98,7 @@ useHead({
       </div>
     </div> <!-- END: Round 1 -->
     <!-- START: Round 2 -->
-    <div v-if="round === 2 && genre === 'hh'">
+    <div v-if="round === 2 && genre === 'hiphop'">
       <!-- Random songs to choose from round 1 -->
       <div v-if="songG === 1">
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/18Mh3v6rBCCpcNYzyaA2RN?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -150,7 +150,7 @@ useHead({
       </div>
     </div> <!-- END: Round 2 -->
     <!-- START: Round 3 -->
-    <div v-if="round === 3 && genre === 'hh'">
+    <div v-if="round === 3 && genre === 'hiphop'">
       <!-- Random songs to choose from round 1 -->
       <div v-if="songG === 1">
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7nYvUtkQMx1v80S2FH2s9J?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -202,7 +202,7 @@ useHead({
       </div>
     </div> <!-- END: Round 3 -->
     <!-- START: Round 4 -->
-    <div v-if="round === 4 && genre === 'hh'">
+    <div v-if="round === 4 && genre === 'hiphop'">
       <!-- Random songs to choose from round 1 -->
       <div v-if="songG === 1">
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0KQd3QY1Y8zC2rfO4ZBQRC?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -254,7 +254,7 @@ useHead({
       </div>
     </div> <!-- END: Round 4 -->
     <!-- START: Round 5 -->
-    <div v-if="round === 5 && genre === 'hh'">
+    <div v-if="round === 5 && genre === 'hiphop'">
       <!-- Random songs to choose from round 1 -->
       <div v-if="songG === 1">
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5K5dQsYdSdo2LKdepxbYAd?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -306,7 +306,7 @@ useHead({
       </div>
     </div> <!-- END: Round 5 -->
     <!-- START: Round 6 -->
-    <div v-if="round === 6 && genre === 'hh'">
+    <div v-if="round === 6 && genre === 'hiphop'">
       <div v-if="songG === 1">
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/53oWwSxPuyH2cjYKXH8fgO?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
@@ -357,7 +357,7 @@ useHead({
       </div>
     </div> <!-- END: Round 6 -->
     <!-- START: Round 7 -->
-    <div v-if="round === 7 && genre === 'hh'">
+    <div v-if="round === 7 && genre === 'hiphop'">
       <div v-if="songG === 1">
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/119c93MHjrDLJTApCVGpvx?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
@@ -408,7 +408,7 @@ useHead({
       </div>
     </div> <!-- END: Round 7 -->
     <!-- START: Round 8 -->
-    <div v-if="round === 8 && genre === 'hh'">
+    <div v-if="round === 8 && genre === 'hiphop'">
       <div v-if="songG === 1">
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4INDiWSKvqSKDEu7mh8HFz?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
@@ -459,7 +459,7 @@ useHead({
       </div>
     </div> <!-- END: Round 8 -->
     <!-- START: Round 9 -->
-    <div v-if="round === 9 && genre === 'hh'">
+    <div v-if="round === 9 && genre === 'hiphop'">
       <div v-if="songG === 1">
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3djNBlI7xOggg7pnsOLaNm?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
@@ -510,7 +510,7 @@ useHead({
       </div>
     </div> <!-- END: Round 9 -->
     <!-- START: Round 10 -->
-    <div v-if="round === 10 && genre === 'hh'">
+    <div v-if="round === 10 && genre === 'hiphop'">
       <div v-if="songG === 1">
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1k28sDTLOz942qa3wEtMQE?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>

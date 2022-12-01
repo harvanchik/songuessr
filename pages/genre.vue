@@ -18,19 +18,18 @@ useHead({
       <br />
 
       <!-- Rock and Roll Option -->
-      <iframe 
-        style="border-radius:12px" 
-        src="https://open.spotify.com/embed/playlist/6TeyryiZ2UEf3CbLXyztFA?utm_source=generator" 
+      <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/37i9dQZF1EIcVkEtbzdTRx" 
         width="100%" 
         height="80" 
-        frameBorder="0" 
+        frameBorder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
         loading="lazy"
       ></iframe>
       <nuxt-link to="/game-rock">
       <button
-        id="rnr"
-        @click="setGenre('rnr'), resetScore(), setState(true), setSong()"
+        id="rock"
+        @click="setGenre('rock'), resetScore(), setState(true), setSong()"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Classic Rock
@@ -71,13 +70,33 @@ useHead({
       ></iframe>
       <nuxt-link to="/game-hip-hop">
       <button
-        id="hh"
-        @click="setGenre('hh'), resetScore(), setState(true), setSong()"
+        id="hiphop"
+        @click="setGenre('hiphop'), resetScore(), setState(true), setSong()"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Hip Hop
       </button>
       <br />
+      </nuxt-link>
+
+      <!-- Reggae Option -->
+      <iframe 
+        style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/37i9dQZF1EQpjs4F0vUZ1x?utm_source=generator" 
+        width="100%" 
+        height="80" 
+        frameBorder="0" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy"
+      ></iframe>
+      <nuxt-link to="/game-reggae">
+      <button
+        id="alt"
+        @click="setGenre('reggae'), resetScore(), setState(true), setSong()"
+        class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
+      >
+        Reggae
+      </button>
       </nuxt-link>
 
       <!-- Indie Option -->
@@ -93,34 +112,13 @@ useHead({
       <nuxt-link to="/game-indie">
       <button
         id="alt"
-        @click="setGenre('alt'), resetScore(), setState(true), setSong()"
+        @click="setGenre('indie'), resetScore(), setState(true), setSong()"
         class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Indie
       </button>
       </nuxt-link>
       
-      <!-- Country Option -->
-      <iframe
-        style="border-radius: 12px"
-        src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYnwbYQ5HnZU"
-        width="100%"
-        height="80"
-        frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-      ></iframe>
-      <nuxt-link to="/game-country">
-      <button
-        id="country"
-        @click="setGenre('country'), resetScore(), setState(true), setSong()"
-        class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
-      >
-        Country
-      </button>
-      <br />
-      </nuxt-link>
-
       <!-- Return to the info page -->
       <nuxt-link to="/info">
         <button
