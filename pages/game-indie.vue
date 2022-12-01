@@ -21,7 +21,7 @@ const showRound = () => {
 // set tab title and include current difficulty
 useHead({
   titleTemplate: () => {
-    return "Time: " + time.value + " Score: " + score.value + " | Songuessr";
+    return genre.value + " Mix | Songuessr";
   },
 });
 </script>
@@ -39,9 +39,9 @@ useHead({
     <h3 v-if="difficulty === 'lightning'" class="mx-auto text-5xl text-blue-500 w-max">Time: {{ showScore() }} Round: {{ showRound() }}</h3>
   
     <!-- Cover the text of the iframe with a box of absolute position and the same color as the iframe -->
-    <div class="absolute mx-1/2 top-[4.3em] w-[325px] h-[72px] bg-[#282828] rounded-md">
-        <p class="relative text-center text-white text-[32px] py-3 px-auto">-- Guess the Song --</p>
-        <div class="relative w-8 h-8 bg-[#282828] rounded-md left-[6.5em] bottom-[1.2em]"></div>
+    <div class="absolute top-[4.3em] w-[325px] h-[72px] bg-[#282828] rounded-md">
+      <p class="relative text-center text-white text-[32px] py-3 px-auto">-- Guess the Song --</p>
+      <div class="relative w-[90px] h-8 bg-[#282828] rounded-md left-[6.7em] bottom-[1.2em]"></div>
     </div>
 
     <!-- START: Indie songs -->

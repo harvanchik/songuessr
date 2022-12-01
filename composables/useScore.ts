@@ -63,12 +63,7 @@ const useScore = () => {
   };
 
   const addRound = (val: number) => {
-    if (round.value < 10) {
-      round.value += val;
-    }
-    else {
-      resetScore();
-    }
+    round.value += val;
   };
 
   const setSong = () => {
