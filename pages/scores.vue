@@ -48,7 +48,7 @@ useHead({
           </nuxt-link>
         </div>
         <!-- Replay 80s Playlist -->
-        <div v-if="genre === '80s'">
+        <div v-if="genre === '80'">
           <nuxt-link to="/game-80s">
             <button @click="resetScore(), setState(true)"
                 class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 text-[32px] uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1"
