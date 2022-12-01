@@ -21,7 +21,7 @@ const showRound = () => {
 // set tab title and include current difficulty
 useHead({
   titleTemplate: () => {
-    return "Time: " + time.value + " Score: " + score.value + " | Songuessr";
+    return genre.value + " Mix | Songuessr";
   },
 });
 </script>
