@@ -29,7 +29,7 @@ useHead({
 <template>
   <div class="flex flex-col min-h-screen pt-20 pb-20 bg-red-100">
     <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
-    <div class="flex flex-col max-w-md mx-auto mt-3 space-y-5 text-5xl">
+    <div class="flex flex-col max-w-sm mx-auto mt-3 space-y-5 text-5xl">
 
     <!-- If the mode is novice, just show the score out of 10 -->
     <h3 v-if="difficulty === 'novice'" class="mx-auto text-5xl text-green-500 w-max">Score: {{ showScore() }} Round: {{ showRound() }}</h3>
@@ -39,9 +39,9 @@ useHead({
     <h3 v-if="difficulty === 'lightning'" class="mx-auto text-5xl text-blue-500 w-max">Time: {{ showScore() }} Round: {{ showRound() }}</h3>
 
     <!-- Cover the text of the iframe with a box of absolute position and the same color as the iframe -->
-    <div class="absolute top-[4.3em] w-[325px] h-[72px] bg-[#282828] rounded-md">
-      <p class="relative text-center text-white text-[32px] py-3 px-auto">-- Guess the Song --</p>
-      <div class="relative w-[90px] h-8 bg-[#282828] rounded-md left-[6.7em] bottom-[1.2em]"></div>
+    <div class="absolute top-[4.3em] w-[325px] h-[72.5px] bg-[#282828] rounded-md">
+      <p class="relative text-center text-white text-[32px] py-3 px-auto">--- Play Button ---</p>
+      <div class="relative w-[50px] h-8 bg-[#282828] rounded-md left-[6.7em] bottom-[1.17em]"></div>
     </div>
     
     <!-- START: 80's songs -->
