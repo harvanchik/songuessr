@@ -41,55 +41,55 @@ useHead({
     <!-- Cover the text of the iframe with a box of absolute position and the same color as the iframe -->
     <div class="absolute top-[4.3em] w-[325px] h-[72.5px] bg-[#282828] rounded-md">
       <p class="relative text-center text-white text-[32px] py-3 px-auto">--- Play Button ---</p>
-      <div class="relative w-[50px] h-8 bg-[#282828] left-[6.7em] bottom-[1.17em]"></div>
+      <div class="relative w-[50px] h-8 bg-[#282828] rounded-md left-[6.7em] bottom-[1.17em]"></div>
     </div>
 
-    <!-- START: rock Songs -->
+    <!-- START: Reggae Songs -->
     <!-- START: Round 1 -->
-    <div v-if="round === 1 && genre === 'rock'">
+    <div v-if="round === 1 && genre === 'reggae'">
       <div v-if="songG === 1">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5NfzVueIjM2uwu7UWTvZAU?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6eQmf8ETrSS10DjUDMTLeE?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 2">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0vFOzaXqZHahrZp6enQwQb?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4paJ10JPNCyOaLtz2cY928?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 3">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6ITuEsxEy2qPhqMowdDAeI?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0wqEjeBH97VfKHborK6h0P?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 4">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0cKk8BKEi7zXbdrYdyqBP5?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5jkxC8SIZJ4qqusxRPVS5s?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div><br>
       <!-- Buttons for the Novice Difficulty -->
       <!-- Option 1 -->
       <div v-if="difficulty === 'novice'">
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(1), setSong()"
           class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 mb-5"
-        >Down by the Seaside</button><br />
+        >Down On The Rocks</button><br />
       </nuxt-link>
       <!-- Option 2 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(2), setSong()"
           class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 text-[32px] uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1 mb-5"
-        >Money</button><br />
+        >Badfish</button><br />
       </nuxt-link>
       <!-- Option 3 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(3), setSong()"
           class="duration-250 mx-auto w-full rounded bg-yellow-200 py-2 px-5 text-[32px] uppercase text-yellow-600 transition-[colors,transform] hover:scale-105 hover:bg-yellow-300 hover:bg-gradient-to-r hover:from-yellow-200 hover:to-yellow-400 hover:text-yellow-700 active:translate-y-1 mb-5"
-        >Train in Vain</button><br />
+        >Wild Goose Chase</button><br />
       </nuxt-link>
       <!-- Option 4 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(4), setSong()"
           class="duration-250 mx-auto w-full rounded bg-orange-200 py-2 px-5 text-[32px] uppercase text-orange-600 transition-[colors,transform] hover:scale-105 hover:bg-orange-300 hover:bg-gradient-to-r hover:from-orange-200 hover:to-orange-400 hover:text-orange-700 active:translate-y-1 mb-5"
-        >Behind Blue Eyes</button><br />
+        >Wanted Dread and Alive</button><br />
       </nuxt-link>
       </div>
       <!-- Text Box for the Insane and Lightning Modes -->
       <div v-if="difficulty === 'insane' || difficulty === 'lightning'">
       <input class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 border-2 border-blue-600 mb-5"/>
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), addScore(1)"
           class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
         >Enter</button><br />
@@ -97,50 +97,50 @@ useHead({
       </div>
     </div> <!-- END: Round 1 -->
     <!-- START: Round 2 -->
-    <div v-if="round === 2 && genre === 'rock'">
+    <div v-if="round === 2 && genre === 'reggae'">
       <div v-if="songG === 1">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3dmqIB2Qxe2XZobw9gXxJ6?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/209SbubR5uKaVzj5SeN42w?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 2">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4Jv7xJqocJSTV1kLSALWH6?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7nPMsFa65oZMAUHNuTmTVP?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 3">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2FZ0yrA5aPClG5ZPBlV7n4?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1WS27lReDP65JMqZ5ygBPF?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 4">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3fgch6faHYPKqE6C3hIYfo?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1yxQwMLJIn5oBTOLl38GLL?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div><br>
       <!-- Buttons for the Novice Difficulty -->
       <!-- Option 1 -->
       <div v-if="difficulty === 'novice'">
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(1), setSong()"
           class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 mb-5"
-        >Mary Jane's Last Dance</button><br />
+        >So Much Trouble In The World</button><br />
       </nuxt-link>
       <!-- Option 2 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(2), setSong()"
           class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 text-[32px] uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1 mb-5"
-        >West LA Fadeaway</button><br />
+        >Act Of Affection</button><br />
       </nuxt-link>
       <!-- Option 3 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(3), setSong()"
           class="duration-250 mx-auto w-full rounded bg-yellow-200 py-2 px-5 text-[32px] uppercase text-yellow-600 transition-[colors,transform] hover:scale-105 hover:bg-yellow-300 hover:bg-gradient-to-r hover:from-yellow-200 hover:to-yellow-400 hover:text-yellow-700 active:translate-y-1 mb-5"
-        >Sweet Leaf</button><br />
+        >Morning Ride</button><br />
       </nuxt-link>
       <!-- Option 4 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(4), setSong()"
           class="duration-250 mx-auto w-full rounded bg-orange-200 py-2 px-5 text-[32px] uppercase text-orange-600 transition-[colors,transform] hover:scale-105 hover:bg-orange-300 hover:bg-gradient-to-r hover:from-orange-200 hover:to-orange-400 hover:text-orange-700 active:translate-y-1 mb-5"
-        >In the City</button><br />
+        >Murderer</button><br />
       </nuxt-link>
       </div>
       <!-- Text Box for the Insane and Lightning Modes -->
       <div v-if="difficulty === 'insane' || difficulty === 'lightning'">
       <input class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 border-2 border-blue-600 mb-5"/>
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), addScore(1)"
           class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
         >Enter</button><br />
@@ -148,50 +148,50 @@ useHead({
       </div>
     </div> <!-- END: Round 2 -->
     <!-- START: Round 3 -->
-    <div v-if="round === 3 && genre === 'rock'">
+    <div v-if="round === 3 && genre === 'reggae'">
       <div v-if="songG === 1">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/05f8Hg3RSfiPSCBQOtxl3i?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7IBIZHonObtZG33pkVZZkg?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 2">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5rHGRbh5F1oFQ4CdpzFyhN?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1BkY0N8ChFk2mdLbAUu8ZK?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 3">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5dAxeuDkIkpa6wZpMOuG9i?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7578oiL9J6tFHXEjfCXFAS?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 4">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1Pq1ySROrhPJ1ljTcZPy83?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1pWy7HdCGYXjaGYwrPcD7I?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div><br>
       <!-- Buttons for the Novice Difficulty -->
       <!-- Option 1 -->
       <div v-if="difficulty === 'novice'">
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(1), setSong()"
           class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 mb-5"
-        >When the Levee Breaks</button><br />
+        >Big Ship</button><br />
       </nuxt-link>
       <!-- Option 2 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(2), setSong()"
           class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 text-[32px] uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1 mb-5"
-        >Don't Ask Me No Questions</button><br />
+        >Pass The Dutchie</button><br />
       </nuxt-link>
       <!-- Option 3 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(3), setSong()"
           class="duration-250 mx-auto w-full rounded bg-yellow-200 py-2 px-5 text-[32px] uppercase text-yellow-600 transition-[colors,transform] hover:scale-105 hover:bg-yellow-300 hover:bg-gradient-to-r hover:from-yellow-200 hover:to-yellow-400 hover:text-yellow-700 active:translate-y-1 mb-5"
-        >I Fought the Law</button><br />
+        >Wa-Do-Dem</button><br />
       </nuxt-link>
       <!-- Option 4 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(4), setSong()"
           class="duration-250 mx-auto w-full rounded bg-orange-200 py-2 px-5 text-[32px] uppercase text-orange-600 transition-[colors,transform] hover:scale-105 hover:bg-orange-300 hover:bg-gradient-to-r hover:from-orange-200 hover:to-orange-400 hover:text-orange-700 active:translate-y-1 mb-5"
-        >Long Live Rock</button><br />
+        >Steppin' Out</button><br />
       </nuxt-link>
       </div>
       <!-- Text Box for the Insane and Lightning Modes -->
       <div v-if="difficulty === 'insane' || difficulty === 'lightning'">
       <input class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 border-2 border-blue-600 mb-5"/>
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), addScore(1)"
           class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
         >Enter</button><br />
@@ -199,50 +199,50 @@ useHead({
       </div>
     </div> <!-- END: Round 3 -->
     <!-- START: Round 4 -->
-    <div v-if="round === 4 && genre === 'rock'">
+    <div v-if="round === 4 && genre === 'reggae'">
       <div v-if="songG === 1">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/13tnv0a8pXDcnvn1W7gCCO?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6cy9iNLazUgF4WZR42Qtpv?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 2">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4BP3uh0hFLFRb5cjsgLqDh?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/66TbFEVUswHulatenFGicw?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 3">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7Ar4G7Ci11gpt6sfH9Cgz5?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1ZplT1967Ppenci6vF2TlZ?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 4">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/252pAlbltOjOcUux4dRtjp?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3jSlARN861elnfSuveZx8X?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div><br>
       <!-- Buttons for the Novice Difficulty -->
       <!-- Option 1 -->
       <div v-if="difficulty === 'novice'">
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(1), setSong()"
           class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 mb-5"
-        >Showdown</button><br />
+        >Meridian</button><br />
       </nuxt-link>
       <!-- Option 2 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(2), setSong()"
           class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 text-[32px] uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1 mb-5"
-        >Fortunate Son</button><br />
+        >Island Feeling</button><br />
       </nuxt-link>
       <!-- Option 3 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(3), setSong()"
           class="duration-250 mx-auto w-full rounded bg-yellow-200 py-2 px-5 text-[32px] uppercase text-yellow-600 transition-[colors,transform] hover:scale-105 hover:bg-yellow-300 hover:bg-gradient-to-r hover:from-yellow-200 hover:to-yellow-400 hover:text-yellow-700 active:translate-y-1 mb-5"
-        >Listen to the Music</button><br />
+        >Something Wrong</button><br />
       </nuxt-link>
       <!-- Option 4 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(4), setSong()"
           class="duration-250 mx-auto w-full rounded bg-orange-200 py-2 px-5 text-[32px] uppercase text-orange-600 transition-[colors,transform] hover:scale-105 hover:bg-orange-300 hover:bg-gradient-to-r hover:from-orange-200 hover:to-orange-400 hover:text-orange-700 active:translate-y-1 mb-5"
-        >Must of Got Lost</button><br />
+        >Siren</button><br />
       </nuxt-link>
       </div>
       <!-- Text Box for the Insane and Lightning Modes -->
       <div v-if="difficulty === 'insane' || difficulty === 'lightning'">
       <input class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 border-2 border-blue-600 mb-5"/>
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), addScore(1)"
           class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
         >Enter</button><br />
@@ -250,51 +250,51 @@ useHead({
       </div>
     </div> <!-- END: Round 4 -->
     <!-- START: Round 5 -->
-    <div v-if="round === 5 && genre === 'rock'">
+    <div v-if="round === 5 && genre === 'reggae'">
       <!-- Random songs to choose from round 1 -->
       <div v-if="songG === 1">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2eDdFHgqNJltzlvlZFVDWd?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5722IiSQ4ZqzpwhwFeCz2u?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 2">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0wva7TtE4QUkKtnMHP9BpT?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/194CaJc8VDIpcTLX6Jzmg5?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 3">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4A8jvQQ5EnKlTJIirMhgfA?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6nLASCk64Sz9iKDdBHY9Sz?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 4">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1orVKbp6vqtfAPOmvRofVq?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5o9EeUKGt3I76bHhvFJwZ2?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div><br>
       <!-- Buttons for the Novice Difficulty -->
       <!-- Option 1 -->
       <div v-if="difficulty === 'novice'">
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(1), setSong()"
           class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 mb-5"
-        >Over the Hills and Far Away</button><br />
+        >Positive Vibration</button><br />
       </nuxt-link>
       <!-- Option 2 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(2), setSong()"
           class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 text-[32px] uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1 mb-5"
-        >Spill the Wine</button><br />
+        >I'm Not Crazy</button><br />
       </nuxt-link>
       <!-- Option 3 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(3), setSong()"
           class="duration-250 mx-auto w-full rounded bg-yellow-200 py-2 px-5 text-[32px] uppercase text-yellow-600 transition-[colors,transform] hover:scale-105 hover:bg-yellow-300 hover:bg-gradient-to-r hover:from-yellow-200 hover:to-yellow-400 hover:text-yellow-700 active:translate-y-1 mb-5"
-        >Lover's Rock</button><br />
+        >Chant a Psalm</button><br />
       </nuxt-link>
       <!-- Option 4 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(4), setSong()"
           class="duration-250 mx-auto w-full rounded bg-orange-200 py-2 px-5 text-[32px] uppercase text-orange-600 transition-[colors,transform] hover:scale-105 hover:bg-orange-300 hover:bg-gradient-to-r hover:from-orange-200 hover:to-orange-400 hover:text-orange-700 active:translate-y-1 mb-5"
-        >Rock'n Me</button><br />
+        >Sensi Party</button><br />
       </nuxt-link>
       </div>
       <!-- Text Box for the Insane and Lightning Modes -->
       <div v-if="difficulty === 'insane' || difficulty === 'lightning'">
       <input class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 border-2 border-blue-600 mb-5"/>
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), addScore(1)"
           class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
         >Enter</button><br />
@@ -302,50 +302,50 @@ useHead({
       </div>
     </div> <!-- END: Round 5 -->
     <!-- START: Round 6 -->
-    <div v-if="round === 6 && genre === 'rock'">
+    <div v-if="round === 6 && genre === 'reggae'">
       <div v-if="songG === 1">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6LbbHFEajG9e4m0G3L47c4?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0AgknzkjpcNPPqXxt3hVxd?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 2">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2fnAWGcjkl6TXbq58WjCJv?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2cYAd7BJIOj4Y0pU5Pyesc?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 3">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4RUQVUxaRMwDnsUwW80xz4?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/79SsdKQnzDxQqGfUvJFGkw?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 4">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/28eg5bkYvIHT7HPmzZFwLN?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0OBpi0UROMJXLyU0Zky3KS?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div><br>
       <!-- Buttons for the Novice Difficulty -->
       <!-- Option 1 -->
       <div v-if="difficulty === 'novice'">
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(1), setSong()"
           class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 mb-5"
-        >Pinball Wizard</button><br />
+        >2am</button><br />
       </nuxt-link>
       <!-- Option 2 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(2), setSong()"
           class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 text-[32px] uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1 mb-5"
-        >Cheatin' Woman</button><br />
+        >Who The Cap Fit</button><br />
       </nuxt-link>
       <!-- Option 3 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(3), setSong()"
           class="duration-250 mx-auto w-full rounded bg-yellow-200 py-2 px-5 text-[32px] uppercase text-yellow-600 transition-[colors,transform] hover:scale-105 hover:bg-yellow-300 hover:bg-gradient-to-r hover:from-yellow-200 hover:to-yellow-400 hover:text-yellow-700 active:translate-y-1 mb-5"
-        >Brown Eyed Women</button><br />
+        >Bodyguard</button><br />
       </nuxt-link>
       <!-- Option 4 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(4), setSong()"
           class="duration-250 mx-auto w-full rounded bg-orange-200 py-2 px-5 text-[32px] uppercase text-orange-600 transition-[colors,transform] hover:scale-105 hover:bg-orange-300 hover:bg-gradient-to-r hover:from-orange-200 hover:to-orange-400 hover:text-orange-700 active:translate-y-1 mb-5"
-        >Lonely Is The Night</button><br />
+        >Shark Attack</button><br />
       </nuxt-link>
       </div>
       <!-- Text Box for the Insane and Lightning Modes -->
       <div v-if="difficulty === 'insane' || difficulty === 'lightning'">
       <input class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 border-2 border-blue-600 mb-5"/>
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), addScore(1)"
           class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
         >Enter</button><br />
@@ -353,50 +353,50 @@ useHead({
       </div>
     </div> <!-- END: Round 6 -->
     <!-- START: Round 7 -->
-    <div v-if="round === 7 && genre === 'rock'">
+    <div v-if="round === 7 && genre === 'reggae'">
       <div v-if="songG === 1">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4AiMaeCXwsldpwvA5wu5gM?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1p4NOXfV2uuIScKhqXv0kn?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 2">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3i25w2HOWoafnTIiWJCL71?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4rjaK8Ifn2imrt6uyidOXS?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 3">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/14R4uuf0SMjNmfLfHvMLZJ?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3E3f3Po59cqs9gS3vexHjB?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 4">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2x6cyOuvP4nhQ5hAUU1LhY?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7IwU9ndSNPbGGb0NZsJRBQ?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div><br>
       <!-- Buttons for the Novice Difficulty -->
       <!-- Option 1 -->
       <div v-if="difficulty === 'novice'">
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(1), setSong()"
           class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 mb-5"
-        >Runnin' Down A Dream</button><br />
+        >Rule This Land</button><br />
       </nuxt-link>
       <!-- Option 2 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(2), setSong()"
           class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 text-[32px] uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1 mb-5"
-        >Fool in the Rain</button><br />
+        >Westbound Train</button><br />
       </nuxt-link>
       <!-- Option 3 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(3), setSong()"
           class="duration-250 mx-auto w-full rounded bg-yellow-200 py-2 px-5 text-[32px] uppercase text-yellow-600 transition-[colors,transform] hover:scale-105 hover:bg-yellow-300 hover:bg-gradient-to-r hover:from-yellow-200 hover:to-yellow-400 hover:text-yellow-700 active:translate-y-1 mb-5"
-        >Funk #48</button><br />
+        >Outta Control</button><br />
       </nuxt-link>
       <!-- Option 4 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(4), setSong()"
           class="duration-250 mx-auto w-full rounded bg-orange-200 py-2 px-5 text-[32px] uppercase text-orange-600 transition-[colors,transform] hover:scale-105 hover:bg-orange-300 hover:bg-gradient-to-r hover:from-orange-200 hover:to-orange-400 hover:text-orange-700 active:translate-y-1 mb-5"
-        >Paul's Tune</button><br />
+        >Sunshine and Rain</button><br />
       </nuxt-link>
       </div>
       <!-- Text Box for the Insane and Lightning Modes -->
       <div v-if="difficulty === 'insane' || difficulty === 'lightning'">
       <input class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 border-2 border-blue-600 mb-5"/>
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), addScore(1)"
           class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
         >Enter</button><br />
@@ -404,50 +404,50 @@ useHead({
       </div>
     </div> <!-- END: Round 7 -->
     <!-- START: Round 8 -->
-    <div v-if="round === 8 && genre === 'rock'">
+    <div v-if="round === 8 && genre === 'reggae'">
       <div v-if="songG === 1">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5Zyv0v4rPcrXjkaeImuodv?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2Ovunu5CefrYY6Ovk2lqUd?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 2">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2YOwVfcUTRjNpcLny4UC4r?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7nnxlucFOovCdayN8JcrVZ?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 3">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1lNRVjK8MukRZpeurYssIx?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7ixiCZEHWHc8FxaQXQh2P4?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 4">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5m6livL7ccIS92wq16n52r?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0GGPUysb8GpCG76dQH63te?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div><br>
       <!-- Buttons for the Novice Difficulty -->
       <!-- Option 1 -->
       <div v-if="difficulty === 'novice'">
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(1), setSong()"
           class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 mb-5"
-        >One Rainy Wish</button><br />
+        >Blues Dance Raid</button><br />
       </nuxt-link>
       <!-- Option 2 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(2), setSong()"
           class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 text-[32px] uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1 mb-5"
-        >The Long Run</button><br />
+        >Put It On</button><br />
       </nuxt-link>
       <!-- Option 3 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(3), setSong()"
           class="duration-250 mx-auto w-full rounded bg-yellow-200 py-2 px-5 text-[32px] uppercase text-yellow-600 transition-[colors,transform] hover:scale-105 hover:bg-yellow-300 hover:bg-gradient-to-r hover:from-yellow-200 hover:to-yellow-400 hover:text-yellow-700 active:translate-y-1 mb-5"
-        >Shakedown Street</button><br />
+        >Bam Bam</button><br />
       </nuxt-link>
       <!-- Option 4 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(4), setSong()"
           class="duration-250 mx-auto w-full rounded bg-orange-200 py-2 px-5 text-[32px] uppercase text-orange-600 transition-[colors,transform] hover:scale-105 hover:bg-orange-300 hover:bg-gradient-to-r hover:from-orange-200 hover:to-orange-400 hover:text-orange-700 active:translate-y-1 mb-5"
-        >Monkey Man</button><br />
+        >The International Herb</button><br />
       </nuxt-link>
       </div>
       <!-- Text Box for the Insane and Lightning Modes -->
       <div v-if="difficulty === 'insane' || difficulty === 'lightning'">
       <input class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 border-2 border-blue-600 mb-5"/>
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), addScore(1)"
           class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
         >Enter</button><br />
@@ -455,50 +455,50 @@ useHead({
       </div>
     </div> <!-- END: Round 8 -->
     <!-- START: Round 9 -->
-    <div v-if="round === 9 && genre === 'rock'">
+    <div v-if="round === 9 && genre === 'reggae'">
       <div v-if="songG === 1">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1PehfITh0TTRx3LkDdV4h3?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4Jr6bqJapv428kf9X8NDjh?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 2">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4RS9PmtHQe7I0o5fEeweOY?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0eeFlNmdsltwZNeRweZusW?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 3">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4ItljeeAXtHsnsnnQojaO2?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3bl8T5xzo3Rq5brncCI0WV?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 4">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6UBjSnyP1O5W5ndJoO9vUk?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6UiM0sSEK9gU7ZjIYRPOCW?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div><br>
       <!-- Buttons for the Novice Difficulty -->
       <!-- Option 1 -->
       <div v-if="difficulty === 'novice'">
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(1), setSong()"
           class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 mb-5"
-        >Fame</button><br />
+        >Drift Away</button><br />
       </nuxt-link>
       <!-- Option 2 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(2), setSong()"
           class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 text-[32px] uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1 mb-5"
-        >Dance the Night Away</button><br />
+        >Careful</button><br />
       </nuxt-link>
       <!-- Option 3 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(3), setSong()"
           class="duration-250 mx-auto w-full rounded bg-yellow-200 py-2 px-5 text-[32px] uppercase text-yellow-600 transition-[colors,transform] hover:scale-105 hover:bg-yellow-300 hover:bg-gradient-to-r hover:from-yellow-200 hover:to-yellow-400 hover:text-yellow-700 active:translate-y-1 mb-5"
-        >D'yer Mak'er</button><br />
+        >Ballz Deep</button><br />
       </nuxt-link>
       <!-- Option 4 -->
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), setAnswer(4), setSong()"
           class="duration-250 mx-auto w-full rounded bg-orange-200 py-2 px-5 text-[32px] uppercase text-orange-600 transition-[colors,transform] hover:scale-105 hover:bg-orange-300 hover:bg-gradient-to-r hover:from-orange-200 hover:to-orange-400 hover:text-orange-700 active:translate-y-1 mb-5"
-        >Night Moves</button><br />
+        >Satisfied</button><br />
       </nuxt-link>
       </div>
       <!-- Text Box for the Insane and Lightning Modes -->
       <div v-if="difficulty === 'insane' || difficulty === 'lightning'">
       <input class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 border-2 border-blue-600 mb-5"/>
-      <nuxt-link to="/game-rock">
+      <nuxt-link to="/game-reggae">
         <button @click="addRound(1), addScore(1)"
           class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
         >Enter</button><br />
@@ -506,18 +506,18 @@ useHead({
       </div>
     </div> <!-- END: Round 9 -->
     <!-- START: Round 10 -->
-    <div v-if="round === 10 && genre === 'rock'">
+    <div v-if="round === 10 && genre === 'reggae'">
       <div v-if="songG === 1">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3AySFupxPGQWjauQfFXcr0?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1L1EdM5IDXcrHSE4s7rT6B?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 2">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3rj08Z7MlxxLm8r3wW2fID?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1ATZfYmZOcm24vl5oQtPdC?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 3">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4B3gkbr7aGC2sujjgivK0s?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5iynCtpEY7mx4ou54tHBPH?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div v-if="songG === 4">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1CZR9j4cF4r2uuCpiMdsX5?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/22AbXxQbMdVqEz7xJjhccG?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div><br>
       <!-- Buttons for the Novice Difficulty -->
       <!-- Option 1 -->
@@ -525,25 +525,25 @@ useHead({
       <nuxt-link to="/scores">
         <button @click="addRound(1), setAnswer(1), setSong()"
           class="duration-250 mx-auto w-full rounded bg-blue-200 py-2 px-5 text-[32px] uppercase text-blue-600 transition-[colors,transform] hover:scale-105 hover:bg-blue-300 hover:bg-gradient-to-r hover:from-blue-200 hover:to-blue-400 hover:text-blue-700 active:translate-y-1 mb-5"
-        >Red Angel Dragnet</button><br />
+        >Grab Education</button><br />
       </nuxt-link>
       <!-- Option 2 -->
       <nuxt-link to="/scores">
         <button @click="addRound(1), setAnswer(2), setSong()"
           class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 text-[32px] uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1 mb-5"
-        >Pali Gap</button><br />
+        >Roots, Rock, Reggae</button><br />
       </nuxt-link>
       <!-- Option 3 -->
       <nuxt-link to="/scores">
         <button @click="addRound(1), setAnswer(3), setSong()"
           class="duration-250 mx-auto w-full rounded bg-yellow-200 py-2 px-5 text-[32px] uppercase text-yellow-600 transition-[colors,transform] hover:scale-105 hover:bg-yellow-300 hover:bg-gradient-to-r hover:from-yellow-200 hover:to-yellow-400 hover:text-yellow-700 active:translate-y-1 mb-5"
-        >I can't Explain</button><br />
+        >Ganja Smuggling</button><br />
       </nuxt-link>
       <!-- Option 4 -->
       <nuxt-link to="/scores">
         <button @click="addRound(1), setAnswer(4), setSong()"
           class="duration-250 mx-auto w-full rounded bg-orange-200 py-2 px-5 text-[32px] uppercase text-orange-600 transition-[colors,transform] hover:scale-105 hover:bg-orange-300 hover:bg-gradient-to-r hover:from-orange-200 hover:to-orange-400 hover:text-orange-700 active:translate-y-1 mb-5"
-        >Fire In The Hole</button><br />
+        >Welcome To Jamrock</button><br />
       </nuxt-link>
       </div>
       <!-- Text Box for the Insane and Lightning Modes -->
@@ -556,7 +556,7 @@ useHead({
       </nuxt-link>
       </div>
     </div> <!-- END: Round 10 -->
-    <!-- END: rock Songs -->
+    <!-- END: Reggae Songs -->
 
     <!-- Return to Home Page -->
     <nuxt-link to="/">
