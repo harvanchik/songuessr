@@ -4,5 +4,5 @@ export default defineNuxtConfig({
     shim: false,
   },
   target: "static",
-  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "nuxt-icon"]
+  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "nuxt-icon"],
 });
