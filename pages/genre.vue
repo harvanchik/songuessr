@@ -1,174 +1,135 @@
-<script>
-    export default {
-      async asyncData ({ store }) {
-        return {
-          var1: store.state.var1,
-          var2: store.state.var2
-        }
-      }
-    }
+<script setup lang="ts">
+const { setGenre } = useGenre();
+const { score, time, resetScore, setState, setSong } = useScore();
+useHead({
+  // set tab title and include current difficulty
+  titleTemplate: () => {
+    return "Time: " + time.value + " Score: " + score.value + " | Songuessr";
+  },
+});
 </script>
+
 
 <template>
   <div class="pt-20 pb-20 bg-red-100">
     <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
-    <div class="flex flex-col max-w-md mx-auto mt-20 space-y-5 text-5xl">
-      <h3 class="mx-auto text-5xl text-black w-max">Genres</h3>
+    <div class="flex flex-col max-w-md mx-auto space-y-5 text-5xl">
+      <h3 class="mx-auto mt-3 text-5xl text-purple-500 w-max">Genres</h3>
       <br />
-      <iframe
-        style="border-radius: 12px"
-        src="https://open.spotify.com/embed/playlist/00KjsgI9t715OJFEUFziGJ"
-        width="100%"
-        height="80"
+
+      <!-- Rock and Roll Option -->
+      <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/37i9dQZF1EIcVkEtbzdTRx" 
+        width="100%" 
+        height="80" 
         frameBorder="0"
-        allowfullscreen
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
         loading="lazy"
-      >
-      </iframe>
+      ></iframe>
+      <nuxt-link to="/game-rock">
       <button
-        id="70"
-        var2="70"
-        class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
+        id="rock"
+        @click="setGenre('rock'), resetScore(), setState(true), setSong()"
+        class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
-        70's Pop
+        Classic Rock
       </button>
       <br />
+      </nuxt-link>
+
+      <!-- 80's Option -->
       <iframe
         style="border-radius: 12px"
         src="https://open.spotify.com/embed/playlist/37i9dQZF1DXb57FjYWz00c"
         width="100%"
         height="80"
         frameBorder="0"
-        allowfullscreen
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       ></iframe>
+      <nuxt-link to="/game-80s">
       <button
         id="80"
-        var2="80"
-        class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
+        @click="setGenre('80'), resetScore(), setState(true), setSong()"
+        class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
-        80's Pop
+        80's Hits
       </button>
       <br />
-      <iframe
-        style="border-radius: 12px"
-        src="https://open.spotify.com/embed/playlist/37i9dQZF1EQn2GRFTFMl2A?utm_source=generator"
-        width="100%"
-        height="80"
-        frameBorder="0"
-        allowfullscreen
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-      ></iframe>
-      <button
-        id="90"
-        var2="90"
-        class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
-      >
-        90's Pop
-      </button>
-      <br />
-      <iframe
-        style="border-radius: 12px"
-        src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4o1oenSJRJd"
-        width="100%"
-        height="80"
-        frameBorder="0"
-        allowfullscreen
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-      ></iframe>
-      <button
-        id="00"
-        var2="00"
-        class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
-      >
-        00's Pop
-      </button>
-      <br />
-      <iframe
-        style="border-radius: 12px"
-        src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYnwbYQ5HnZU"
-        width="100%"
-        height="80"
-        frameBorder="0"
-        allowfullscreen
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-      ></iframe>
-      <button
-        id="country"
-        var2="country"
-        class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
-      >
-        Country
-      </button>
-      <br />
-      <iframe
-        style="border-radius: 12px"
-        src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcF6B6QPhFDv"
-        width="100%"
-        height="80"
-        frameBorder="0"
-        allowfullscreen
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-      ></iframe>
-      <button
-        id="rnr"
-        var2="rnr"
-        class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
-      >
-        Rock and Roll
-      </button>
-      <br />
+      </nuxt-link>
+
+      <!-- Hip Hop Option -->
       <iframe
         style="border-radius: 12px"
         src="https://open.spotify.com/embed/playlist/37i9dQZF1DX186v583rmzp"
         width="100%"
         height="80"
         frameBorder="0"
-        allowfullscreen
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       ></iframe>
+      <nuxt-link to="/game-hip-hop">
       <button
-        id="hh"
-        var2="hh"
-        class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
+        id="hiphop"
+        @click="setGenre('hiphop'), resetScore(), setState(true), setSong()"
+        class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Hip Hop
       </button>
       <br />
+      </nuxt-link>
+
+      <!-- Reggae Option -->
+      <iframe 
+        style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/37i9dQZF1EQpjs4F0vUZ1x?utm_source=generator" 
+        width="100%" 
+        height="80" 
+        frameBorder="0" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy"
+      ></iframe>
+      <nuxt-link to="/game-reggae">
+      <button
+        id="alt"
+        @click="setGenre('reggae'), resetScore(), setState(true), setSong()"
+        class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
+      >
+        Reggae
+      </button>
+      </nuxt-link>
+
+      <!-- Indie Option -->
       <iframe
         style="border-radius: 12px"
         src="https://open.spotify.com/embed/playlist/37i9dQZF1DX2Nc3B70tvx0"
         width="100%"
         height="80"
         frameBorder="0"
-        allowfullscreen
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       ></iframe>
+      <nuxt-link to="/game-indie">
       <button
         id="alt"
-        var2="alt"
-        class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
+        @click="setGenre('indie'), resetScore(), setState(true), setSong()"
+        class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
-        Alternative / Indie
+        Indie
       </button>
-      <br /><br />
-      <nuxt-link to="/">
+      </nuxt-link>
+      
+      <!-- Return to the info page -->
+      <nuxt-link to="/info">
         <button
-          id="alt"
-          class="duration-250 mx-auto w-full rounded bg-slate-200 py-2 px-5 uppercase text-slate-600 transition-[colors,transform] hover:scale-105 hover:bg-slate-300 hover:bg-gradient-to-r hover:from-slate-200 hover:to-slate-400 hover:text-slate-700 active:translate-y-1"
+          class="duration-250 mx-auto w-full rounded bg-red-200 py-2 px-5 my-10 uppercase text-red-600 transition-[colors,transform] hover:scale-105 hover:bg-red-300 hover:bg-gradient-to-r hover:from-red-200 hover:to-red-400 hover:text-red-700 active:tranpurple-y-1"
         >
-          Go Back
+          Back
         </button>
       </nuxt-link>
       <br />
+      
     </div>
   </div>
 </template>
+

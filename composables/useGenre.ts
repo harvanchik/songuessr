@@ -1,16 +1,16 @@
 const useGenre = () => {
-  const Genre = useState("genre", () => null);
+  const genre = useState("genre", () => null);
 
   const setGenre = (val: string) => {
-    Genre.value = val;
+    genre.value = val;
   };
 
   const getGenre = () => {
-    return Genre.value;
+    return genre.value;
   };
 
   return {
-    Genre,
+    genre: genre,
     setGenre,
   };
 };
