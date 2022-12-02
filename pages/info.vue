@@ -5,25 +5,20 @@ const { genre } = useGenre();
 const getDescription = () => {
   switch (difficulty.value) {
     case "novice":
-      return `Casual players trying to pass time throughout the day or enhance their
-        music knowledge can play this mode to figure out their knowledge of a
-        certain genre of music. This mode gives multiple choice options, so the
-        user has a range of options to guess or choose from before answering.
-        They are given their scores out of 10, since they are given 10 song
-        choices to choose from.`;
+      return `Novice Mode is for casual players trying to pass time or enhance
+      their musical knowledge. It is also a good starting point to become familiar
+      with the game, as it is the easiest mode and the player can learn the song names. 
+      See how many answers you can get right within the 10 rounds!`;
     case "insane":
-      return `Hardcore players that are attempting speedruns and high score on the
-        leaderboard will choose the insane mode. This mode gives score
-        multipliers through the duration of the guess, so the faster the guess
-        the higher the score. It also has a text box, so the user would have to
-        know the name of the song exactly to get it correct. A correct answer is
-        100 points, and an almost instant answer can go up to a 5x multiplier.`;
+      return `The Insane Mode is for more experienced players. In this mode, 
+      the player will be shown a text box instead of set buttons. You will have
+      to know the song name and type it in correctly to get the answer right. 
+      The faster you enter your answer, the more points you will get!`;
     case "lightning":
-      return `This is a very fast speed mode similar to insane mode, but without the
-        points system involved. This mode records how quickly you can guess 10
-        songs in a given amount of time. Your high score gets recorded as a
-        time, where the lower the time the better the rating. If any of your
-        guesses are incorrect, your game ends and you cannot record a time.`;
+      return `The Lightning Mode is all about speed. This mode will require some
+      practice in the other modes to get the hang of it, unless you are a true
+      music genius. The setup is similar to the Insane Mode, but this mode tracks
+      the time it takes for you to enter all 10 answers. Can you set a new record?`;
     default:
       return `No description found for this difficulty`;
   }
@@ -31,7 +26,7 @@ const getDescription = () => {
 useHead({
   // set tab title and include current difficulty
   titleTemplate: () => {
-    return "Difficulty: " + difficulty.value + " Genre: " + genre.value + " | Songuessr";
+    return difficulty.value + " Difficulty Info | Songuessr";
   },
 });
 </script>
@@ -44,7 +39,7 @@ useHead({
 
       <!-- Green if Novice -->
       <div class="novice-info" v-if="difficulty === 'novice'">
-        <h3 class="mx-auto mt-3 mb-10 text-4xl text-green-500 capitalize w-max">
+        <h3 class="mx-auto mt-3 mb-10 text-5xl text-green-500 capitalize w-max">
           {{ difficulty }} Mode Rules
         </h3>
         <p class="p-5 mb-10 text-lg bg-green-300 rounded-lg">
@@ -54,7 +49,7 @@ useHead({
 
       <!-- Purple if Insane -->
       <div class="insane-info" v-if="difficulty === 'insane'">
-        <h3 class="mx-auto mt-3 mb-10 text-4xl text-purple-500 capitalize w-max">
+        <h3 class="mx-auto mt-3 mb-10 text-5xl text-purple-500 capitalize w-max">
           {{ difficulty }} Mode Rules
         </h3>
         <p class="p-5 mb-10 text-lg bg-purple-200 rounded-lg">
@@ -64,7 +59,7 @@ useHead({
 
       <!-- Blue if Lightning -->
       <div class="lightning-info" v-if="difficulty === 'lightning'">
-        <h3 class="mx-auto mt-3 mb-10 text-4xl text-blue-500 capitalize w-max">
+        <h3 class="mx-auto mt-3 mb-10 text-5xl text-blue-500 capitalize w-max">
           {{ difficulty }} Mode Rules
         </h3>
         <p class="p-5 mb-10 text-lg bg-blue-200 rounded-lg">

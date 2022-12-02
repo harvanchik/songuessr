@@ -175,7 +175,7 @@ let userInput = ref("");
           <nuxt-link to="/game-reggae">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -284,7 +284,7 @@ let userInput = ref("");
           <nuxt-link to="/game-reggae">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -393,7 +393,7 @@ let userInput = ref("");
           <nuxt-link to="/game-reggae">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -502,7 +502,7 @@ let userInput = ref("");
           <nuxt-link to="/game-reggae">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -612,7 +612,7 @@ let userInput = ref("");
           <nuxt-link to="/game-reggae">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -721,7 +721,7 @@ let userInput = ref("");
           <nuxt-link to="/game-reggae">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -830,7 +830,7 @@ let userInput = ref("");
           <nuxt-link to="/game-reggae">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -939,7 +939,7 @@ let userInput = ref("");
           <nuxt-link to="/game-reggae">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -1048,7 +1048,7 @@ let userInput = ref("");
           <nuxt-link to="/game-reggae">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -1157,7 +1157,7 @@ let userInput = ref("");
           <nuxt-link to="/scores">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >

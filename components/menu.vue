@@ -7,6 +7,7 @@ const { setDifficulty } = useDifficulty();
   <div class="flex flex-col h-screen pt-20 bg-red-100">
     <!-- START: Title -->
     <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
+    <h3 class="p-4 mx-auto mt-5 text-xl italic text-pink-500 w-max">Handcrafted 'Algo-Rhythms' to soothe your groove!</h3>
     <!-- END: Title -->
 
     <!-- START: Menu Buttons -->

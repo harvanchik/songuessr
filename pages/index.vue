@@ -4,7 +4,7 @@ const { genre } = useGenre();
 useHead({
   // set tab title and include current difficulty
   titleTemplate: () => {
-    return "Difficulty: " + difficulty.value + " Genre: " + genre.value + " | Songuessr";
+    return "Choose Difficulty | Songuessr";
   },
 });
 </script>
