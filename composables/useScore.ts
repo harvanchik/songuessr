@@ -28,32 +28,29 @@ const useScore = () => {
   };
 
   const resetScore = () => {
-    clearInterval(interval);
     setScore(0);
     setTime(0);
     setRound(1);
     setSong();
-    setState(false);
+    started.value = false;
   };
 
-  // checks if the game and the timer has started
-  const setState = (val: boolean) => {
-    started.value = val;
-    // If the game has started, reset the score and start the timer
-    if (started) {
+  const startTimer = () => {
+    if (!started.value) 
+    {
       interval = setInterval(() => {
         time.value += 1;
       }, 1000);
-    }
-    // If the game hasn't started, stop the timer and reset the score
-    if (!started) {
-      resetScore();
-      interval = clearInterval(interval);
+      started.value = true;
+      console.log("Timer started");
     }
   };
 
-  const getState = () => {
-    return started.value;
+  const stopTimer = () => {
+    clearInterval(interval);
+    started.value = false;
+    resetScore();
+    console.log("Timer stopped");
   };
 
   const setRound = (val: number) => {
@@ -682,12 +679,13 @@ const useScore = () => {
     round,
     songG,
     songU,
+    startTimer,
+    stopTimer,
     setScore,
     resetScore,
     resetSong,
     addScore,
     addRound,
-    setState,
     setSong,
     setAnswer,
     checkAnswer,

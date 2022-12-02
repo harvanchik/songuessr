@@ -6,11 +6,9 @@ const {
   time,
   round,
   songG,
-  addScore,
+  stopTimer,
   addRound,
   resetScore,
-  resetSong,
-  setState,
   setAnswer,
   setSong,
   checkAnswer,
@@ -1157,7 +1155,7 @@ let userInput = ref("");
           <nuxt-link to="/scores">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong(), stopTimer()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -1172,7 +1170,7 @@ let userInput = ref("");
       <!-- Return to Home Page -->
       <nuxt-link to="/">
         <button
-          @click="resetScore(), setState(false)"
+          @click="resetScore(), stopTimer()"
           class="duration-250 mx-auto w-full rounded bg-red-200 py-2 px-5 text-[32px] uppercase text-red-600 transition-[colors,transform] hover:scale-105 hover:bg-red-300 hover:bg-gradient-to-r hover:from-red-200 hover:to-red-400 hover:text-red-700 active:translate-y-1"
         >
           Exit</button

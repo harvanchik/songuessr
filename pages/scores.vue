@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { difficulty } = useDifficulty();
 const { genre } = useGenre();
-const { score, time, resetScore, setState } = useScore();
+const { score, time, resetScore, startTimer, stopTimer } = useScore();
 // get the score or time to show on the page
 const showScore = () => {
   if (difficulty.value === "novice" || difficulty.value === "insane") {
@@ -42,7 +42,7 @@ useHead({
         <!-- Replay Rock Playlist -->
         <div v-if="genre === 'rock'">
           <nuxt-link to="/game-rock">
-            <button @click="resetScore(), setState(true)"
+            <button @click="resetScore(), startTimer()"
                 class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 text-[32px] uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1"
             >Replay Game</button><br />
           </nuxt-link>
@@ -50,7 +50,7 @@ useHead({
         <!-- Replay 80s Playlist -->
         <div v-if="genre === '80'">
           <nuxt-link to="/game-80s">
-            <button @click="resetScore(), setState(true)"
+            <button @click="resetScore(), startTimer()"
                 class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 text-[32px] uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1"
             >Replay Game</button><br />
           </nuxt-link>
@@ -58,7 +58,7 @@ useHead({
         <!-- Replay Hip Hop Playlist -->
         <div v-if="genre === 'hiphop'">
           <nuxt-link to="/game-hip-hop">
-            <button @click="resetScore(), setState(true)"
+            <button @click="resetScore(), startTimer()"
                 class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 text-[32px] uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1"
             >Replay Game</button><br />
           </nuxt-link>
@@ -66,7 +66,7 @@ useHead({
         <!-- Replay Reggae Playlist -->
         <div v-if="genre === 'reggae'">
           <nuxt-link to="/game-reggae">
-            <button @click="resetScore(), setState(true)"
+            <button @click="resetScore(), startTimer()"
                 class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 text-[32px] uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1"
             >Replay Game</button><br />
           </nuxt-link>
@@ -74,7 +74,7 @@ useHead({
         <!-- Replay Indie Playlist -->
         <div v-if="genre === 'indie'">
           <nuxt-link to="/game-indie">
-            <button @click="resetScore(), setState(true)"
+            <button @click="resetScore(), startTimer()"
                 class="duration-250 mx-auto w-full rounded bg-green-200 py-2 px-5 text-[32px] uppercase text-green-600 transition-[colors,transform] hover:scale-105 hover:bg-green-300 hover:bg-gradient-to-r hover:from-green-200 hover:to-green-400 hover:text-green-700 active:translate-y-1"
             >Replay Game</button><br />
           </nuxt-link>
@@ -83,7 +83,7 @@ useHead({
 
         <!-- Return to Home Page -->
         <nuxt-link to="/">
-            <button @click="resetScore(), setState(false)"
+            <button @click="resetScore(), stopTimer()"
                 class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-5 text-[32px] uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1"
             >New Game</button><br />
         </nuxt-link>

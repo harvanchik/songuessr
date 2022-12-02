@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { setGenre } = useGenre();
-const { score, time, resetScore, setState, setSong } = useScore();
+const { resetScore, setSong, startTimer } = useScore();
 useHead({
   // set tab title and include current difficulty
   titleTemplate: () => {
@@ -28,7 +28,7 @@ useHead({
       <nuxt-link to="/game-rock">
       <button
         id="rock"
-        @click="setGenre('rock'), resetScore(), setState(true), setSong()"
+        @click="setGenre('rock'), resetScore(), startTimer(), setSong()"
         class="duration-250 mx-auto mb-5 w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Classic Rock
@@ -49,7 +49,7 @@ useHead({
       <nuxt-link to="/game-80s">
       <button
         id="80"
-        @click="setGenre('80'), resetScore(), setState(true), setSong()"
+        @click="setGenre('80'), resetScore(), startTimer(), setSong()"
         class="duration-250 mx-auto mb-5 w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         80's Hits
@@ -70,7 +70,7 @@ useHead({
       <nuxt-link to="/game-hip-hop">
       <button
         id="hiphop"
-        @click="setGenre('hiphop'), resetScore(), setState(true), setSong()"
+        @click="setGenre('hiphop'), resetScore(), startTimer(), setSong()"
         class="duration-250 mx-auto mb-5 w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Hip Hop
@@ -91,7 +91,7 @@ useHead({
       <nuxt-link to="/game-reggae">
       <button
         id="alt"
-        @click="setGenre('reggae'), resetScore(), setState(true), setSong()"
+        @click="setGenre('reggae'), resetScore(), startTimer(), setSong()"
         class="duration-250 mx-auto mb-5 w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Reggae
@@ -111,7 +111,7 @@ useHead({
       <nuxt-link to="/game-indie">
       <button
         id="alt"
-        @click="setGenre('indie'), resetScore(), setState(true), setSong()"
+        @click="setGenre('indie'), resetScore(), startTimer(), setSong()"
         class="duration-250 mx-auto mb-5 w-full rounded bg-purple-200 py-2 px-5 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:tranpurple-y-1"
       >
         Indie
