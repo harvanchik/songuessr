@@ -69,7 +69,7 @@ let userInput = ref("");
           --- Play Button ---
         </p>
         <div
-          class="relative w-[50px] h-8 bg-[#282828] left-[6.7em] bottom-[1.17em]"
+          class="relative w-[50px] h-8 bg-[#282828] rounded-md left-[6.7em] bottom-[1.17em]"
         ></div>
       </div>
 
