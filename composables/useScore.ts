@@ -39,7 +39,13 @@ const useScore = () => {
     if (!started.value) 
     {
       interval = setInterval(() => {
-        time.value += 1;
+        if (started.value) {
+          time.value++;
+        }
+        else
+        {
+          time.value = 0;
+        }
       }, 1000);
       started.value = true;
       console.log("Timer started");
@@ -49,7 +55,6 @@ const useScore = () => {
   const stopTimer = () => {
     clearInterval(interval);
     started.value = false;
-    resetScore();
     console.log("Timer stopped");
   };
 
