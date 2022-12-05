@@ -32,8 +32,8 @@ useHead({
 
 
 <template>
-  <div class="flex flex-col min-h-screen pt-20 pb-20 bg-red-100">
-    <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
+  <div class="flex flex-col min-h-screen pt-20 pb-20 bg-gradient-to-bl from-purple-800 to-blue-300">
+    <h1 class="mx-auto text-6xl font-semibold text-red-900 w-max">Songuessr</h1>
     <div class="flex flex-col max-w-sm mx-auto space-y-5 text-4xl">
 
       <!-- Green if Novice -->
@@ -48,7 +48,7 @@ useHead({
 
       <!-- Purple if Insane -->
       <div class="insane-info" v-if="difficulty === 'insane'">
-        <h3 class="mx-auto mt-3 mb-10 text-4xl text-purple-500 capitalize w-max">
+        <h3 class="mx-auto mt-3 mb-10 text-4xl text-purple-400 capitalize w-max">
           {{ difficulty }} Mode Rules
         </h3>
         <p class="p-5 mb-10 text-lg bg-purple-200 rounded-lg">
@@ -58,7 +58,7 @@ useHead({
 
       <!-- Blue if Lightning -->
       <div class="lightning-info" v-if="difficulty === 'lightning'">
-        <h3 class="mx-auto mt-3 mb-10 text-4xl text-blue-500 capitalize w-max">
+        <h3 class="mx-auto mt-3 mb-10 text-4xl text-blue-400 capitalize w-max">
           {{ difficulty }} Mode Rules
         </h3>
         <p class="p-5 mb-10 text-lg bg-blue-200 rounded-lg">

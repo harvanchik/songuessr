@@ -11,10 +11,10 @@ useHead({
 
 
 <template>
-  <div class="pt-20 pb-20 bg-red-100">
-    <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
+  <div class="pt-20 pb-20 bg-gradient-to-bl from-purple-800 to-blue-300">
+    <h1 class="mx-auto text-6xl font-semibold text-red-900 w-max">Songuessr</h1>
     <div class="flex flex-col max-w-sm mx-auto space-y-5 text-5xl">
-      <h3 class="mx-auto my-3 text-5xl text-purple-500 w-max">Genres</h3>
+      <h3 class="mx-auto my-3 text-5xl text-purple-400 w-max">Genres</h3>
 
       <!-- Rock and Roll Option -->
       <iframe style="border-radius:12px" 

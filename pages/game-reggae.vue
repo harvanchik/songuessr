@@ -37,8 +37,8 @@ let userInput = ref("");
 </script>
 
 <template>
-  <div class="flex flex-col min-h-screen pt-20 pb-20 bg-red-100">
-    <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
+  <div class="flex flex-col min-h-screen pt-20 pb-20 bg-gradient-to-bl from-purple-800 to-blue-300">
+    <h1 class="mx-auto text-6xl font-semibold text-red-900 w-max">Songuessr</h1>
     <div class="flex flex-col max-w-sm mx-auto mt-3 space-y-5 text-5xl">
       <!-- If the mode is novice, just show the score out of 10 -->
       <h3
@@ -50,14 +50,14 @@ let userInput = ref("");
       <!-- If the mode is insane, show their current score -->
       <h3
         v-if="difficulty === 'insane'"
-        class="mx-auto text-5xl text-purple-500 w-max"
+        class="mx-auto text-5xl text-purple-400 w-max"
       >
         Score: {{ showScore() }} Round: {{ showRound() }}
       </h3>
       <!-- If the mode is lightning, show their current accumulated time -->
       <h3
         v-if="difficulty === 'lightning'"
-        class="mx-auto text-5xl text-blue-500 w-max"
+        class="mx-auto text-5xl text-blue-400 w-max"
       >
         Round: {{ showRound() }}
       </h3>

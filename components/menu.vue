@@ -1,12 +1,18 @@
 <script setup lang="ts">
 const { setDifficulty } = useDifficulty();
+useHead({
+  // set tab title and include current difficulty
+  titleTemplate: () => {
+    return "Choose Difficulty | Songuessr";
+  },
+});
 </script>
 
 <template>
   <!-- START: Body -->
-  <div class="flex flex-col h-screen pt-20 bg-red-100">
+  <div class="flex flex-col h-screen pt-20 bg-gradient-to-bl from-purple-800 to-blue-300">
     <!-- START: Title -->
-    <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
+    <h1 class="mx-auto text-6xl font-semibold text-red-900 w-max">Songuessr</h1>
     <h3 class="max-w-sm p-4 mx-auto mt-5 text-xl italic text-center text-pink-500 rounded-lg bg-slate-100">Handcrafted 'Algo-Rhythms' to soothe your groove!</h3>
     <!-- END: Title -->
 

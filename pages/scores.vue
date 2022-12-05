@@ -20,12 +20,12 @@ useHead({
 </script>
 
 <template>
-    <div class="flex flex-col min-h-screen pt-20 pb-20 bg-red-100">
-        <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
+    <div class="flex flex-col min-h-screen pt-20 pb-20 bg-gradient-to-bl from-purple-800 to-blue-300">
+        <h1 class="mx-auto text-6xl font-semibold text-red-900 w-max">Songuessr</h1>
         <div class="flex flex-col max-w-md mx-auto mt-3 space-y-5 text-5xl">
 
         <!-- Game Results Title -->
-        <div class="p-5 mx-auto bg-black rounded-md">
+        <div class="p-5 mx-auto my-2 bg-black rounded-md">
           <p class="text-red-400">Game Results</p>
         </div>
       
@@ -33,10 +33,10 @@ useHead({
         <!-- If the mode is novice, just show the score out of 10 -->
         <h3 v-if="difficulty === 'novice'" class="mx-auto text-5xl text-green-500 w-max">Score: {{ showScore() }} / 10</h3>
         <!-- If the mode is insane, show their current score -->
-        <h3 v-if="difficulty === 'insane'" class="mx-auto text-5xl text-purple-500 w-max">Score: {{ showScore() }} points</h3>
+        <h3 v-if="difficulty === 'insane'" class="mx-auto text-5xl text-purple-400 w-max">Score: {{ showScore() }} points</h3>
         <!-- If the mode is lightning, show their current accumulated time -->
-        <h3 v-if="difficulty === 'lightning' && score >= 10" class="mx-auto text-5xl text-blue-500 w-max">Time: {{ showScore() }} secs</h3>
-        <h3 v-if="difficulty === 'lightning' && score < 10" class="max-w-sm mx-auto text-5xl text-center text-blue-500">{{ showScore() }} Songs Were Incorrect</h3>
+        <h3 v-if="difficulty === 'lightning' && score >= 10" class="mx-auto text-5xl text-blue-400 w-max">Time: {{ showScore() }} secs</h3>
+        <h3 v-if="difficulty === 'lightning' && score < 10" class="max-w-sm mx-auto text-5xl text-center text-blue-400">{{ showScore() }} Songs Were Incorrect</h3>
         <!-- END: Score Section -->
 
         <!-- START: Replay Button -->
