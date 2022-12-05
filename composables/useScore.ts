@@ -5,6 +5,8 @@ const useScore = () => {
   const songG = useState("songG", () => 0); // correct answer
   const songU = useState("songU", () => 0); // user picked answer
   const started = useState("started", () => false);
+  const games = useState("games", () => 0);
+  const endTime = useState("endTime", () => null);
   let interval: any = null;
 
   const setScore = (val: number) => {
@@ -34,8 +36,22 @@ const useScore = () => {
     setSong();
     started.value = false;
   };
+  
+  const setScoreTime = () => {
+    if (score.value >= 10) {
+      endTime.value = Math.floor(getTime() / games.value);
+    }
+    else {
+      endTime.value = 10 - score.value;
+    }
+  };
+
+  const getScoreTime = () => {
+    return endTime.value;
+  };
 
   const startTimer = () => {
+    games.value++;
     if (!started.value) 
     {
       interval = setInterval(() => {
@@ -681,12 +697,14 @@ const useScore = () => {
   return {
     score,
     time,
+    endTime,
     round,
     songG,
     songU,
     startTimer,
     stopTimer,
     setScore,
+    setScoreTime,
     resetScore,
     resetSong,
     addScore,

@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const { difficulty } = useDifficulty();
 const { genre } = useGenre();
-const { score, time, resetScore, startTimer, stopTimer } = useScore();
+const { score, endTime, resetScore, startTimer, stopTimer } = useScore();
 // get the score or time to show on the page
 const showScore = () => {
   if (difficulty.value === "novice" || difficulty.value === "insane") {
     return score.value;
   } 
   else {
-    return time.value;
+    return endTime.value;
   }
 };
 // set tab title and include current difficulty
@@ -35,7 +35,8 @@ useHead({
         <!-- If the mode is insane, show their current score -->
         <h3 v-if="difficulty === 'insane'" class="mx-auto text-5xl text-purple-500 w-max">Score: {{ showScore() }} points</h3>
         <!-- If the mode is lightning, show their current accumulated time -->
-        <h3 v-if="difficulty === 'lightning'" class="mx-auto text-5xl text-blue-500 w-max">Time: {{ showScore() }} secs</h3>
+        <h3 v-if="difficulty === 'lightning' && score >= 10" class="mx-auto text-5xl text-blue-500 w-max">Time: {{ showScore() }} secs</h3>
+        <h3 v-if="difficulty === 'lightning' && score < 10" class="max-w-sm mx-auto text-5xl text-center text-blue-500">{{ showScore() }} Songs Were Incorrect</h3>
         <!-- END: Score Section -->
 
         <!-- START: Replay Button -->

@@ -12,7 +12,7 @@ const getDescription = () => {
       return `The Insane Mode is for more experienced players. In this mode, 
       the player will be shown a text box instead of set buttons. You will have
       to know the song name and type it in correctly to get the answer right. 
-      The faster you enter your answer, the more points you will get!`;
+      Make sure to type in the correct spelling and punctuation!`;
     case "lightning":
       return `The Lightning Mode is all about speed. This mode will require some
       practice in the other modes to get the hang of it, unless you are a true
