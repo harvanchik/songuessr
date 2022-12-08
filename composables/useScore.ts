@@ -5,6 +5,8 @@ const useScore = () => {
   const songG = useState("songG", () => 0); // correct answer
   const songU = useState("songU", () => 0); // user picked answer
   const started = useState("started", () => false);
+  const games = useState("games", () => 0);
+  const endTime = useState("endTime", () => null);
   let interval: any = null;
 
   const setScore = (val: number) => {
@@ -28,32 +30,48 @@ const useScore = () => {
   };
 
   const resetScore = () => {
-    clearInterval(interval);
     setScore(0);
     setTime(0);
     setRound(1);
     setSong();
-    setState(false);
+    started.value = false;
+  };
+  
+  const setScoreTime = () => {
+    if (score.value >= 10) {
+      endTime.value = Math.floor(getTime() / games.value);
+    }
+    else {
+      endTime.value = 10 - score.value;
+    }
   };
 
-  // checks if the game and the timer has started
-  const setState = (val: boolean) => {
-    started.value = val;
-    // If the game has started, reset the score and start the timer
-    if (started) {
+  const getScoreTime = () => {
+    return endTime.value;
+  };
+
+  const startTimer = () => {
+    games.value++;
+    if (!started.value) 
+    {
       interval = setInterval(() => {
-        time.value += 1;
+        if (started.value) {
+          time.value++;
+        }
+        else
+        {
+          time.value = 0;
+        }
       }, 1000);
-    }
-    // If the game hasn't started, stop the timer and reset the score
-    if (!started) {
-      resetScore();
-      interval = clearInterval(interval);
+      started.value = true;
+      console.log("Timer started");
     }
   };
 
-  const getState = () => {
-    return started.value;
+  const stopTimer = () => {
+    clearInterval(interval);
+    started.value = false;
+    console.log("Timer stopped");
   };
 
   const setRound = (val: number) => {
@@ -679,15 +697,18 @@ const useScore = () => {
   return {
     score,
     time,
+    endTime,
     round,
     songG,
     songU,
+    startTimer,
+    stopTimer,
     setScore,
+    setScoreTime,
     resetScore,
     resetSong,
     addScore,
     addRound,
-    setState,
     setSong,
     setAnswer,
     checkAnswer,

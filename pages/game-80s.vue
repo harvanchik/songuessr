@@ -6,12 +6,11 @@ const {
   time,
   round,
   songG,
-  addScore,
+  stopTimer,
   addRound,
   resetScore,
-  resetSong,
-  setState,
   setAnswer,
+  setScoreTime,
   setSong,
   checkAnswer,
 } = useScore();
@@ -38,8 +37,8 @@ let userInput = ref("");
 </script>
 
 <template>
-  <div class="flex flex-col min-h-screen pt-20 pb-20 bg-red-100">
-    <h1 class="mx-auto text-6xl font-semibold text-red-500 w-max">Songuessr</h1>
+  <div class="flex flex-col min-h-screen pt-20 pb-20 bg-gradient-to-bl from-purple-800 to-blue-300">
+    <h1 class="mx-auto text-6xl font-semibold text-red-900 w-max">Songuessr</h1>
     <div class="flex flex-col max-w-sm mx-auto mt-3 space-y-5 text-5xl">
       <!-- If the mode is novice, just show the score out of 10 -->
       <h3
@@ -51,16 +50,16 @@ let userInput = ref("");
       <!-- If the mode is insane, show their current score -->
       <h3
         v-if="difficulty === 'insane'"
-        class="mx-auto text-5xl text-purple-500 w-max"
+        class="mx-auto text-5xl text-purple-400 w-max"
       >
         Score: {{ showScore() }} Round: {{ showRound() }}
       </h3>
       <!-- If the mode is lightning, show their current accumulated time -->
       <h3
         v-if="difficulty === 'lightning'"
-        class="mx-auto text-5xl text-blue-500 w-max"
+        class="mx-auto text-5xl text-blue-400 w-max"
       >
-        Time: {{ showScore() }} Round: {{ showRound() }}
+        Round: {{ showRound() }}
       </h3>
 
       <!-- Cover the text of the iframe with a box of absolute position and the same color as the iframe -->
@@ -176,7 +175,7 @@ let userInput = ref("");
           <nuxt-link to="/game-80s">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -290,7 +289,7 @@ let userInput = ref("");
           <nuxt-link to="/game-80s">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -404,7 +403,7 @@ let userInput = ref("");
           <nuxt-link to="/game-80s">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -518,7 +517,7 @@ let userInput = ref("");
           <nuxt-link to="/game-80s">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -632,7 +631,7 @@ let userInput = ref("");
           <nuxt-link to="/game-80s">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -746,7 +745,7 @@ let userInput = ref("");
           <nuxt-link to="/game-80s">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -860,7 +859,7 @@ let userInput = ref("");
           <nuxt-link to="/game-80s">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -974,7 +973,7 @@ let userInput = ref("");
           <nuxt-link to="/game-80s">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -1088,7 +1087,7 @@ let userInput = ref("");
           <nuxt-link to="/game-80s">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), setSong()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -1202,7 +1201,7 @@ let userInput = ref("");
           <nuxt-link to="/scores">
             <button
               @click="
-                checkAnswer(userInput, genre), addRound(1), (userInput = '')
+                checkAnswer(userInput, genre), addRound(1), (userInput = ''), stopTimer(), setSong(), setScoreTime()
               "
               class="duration-250 mx-auto w-full rounded bg-purple-200 py-2 px-10 uppercase text-purple-600 transition-[colors,transform] hover:scale-105 hover:bg-purple-300 hover:bg-gradient-to-r hover:from-purple-200 hover:to-purple-400 hover:text-purple-700 active:translate-y-1 mb-5"
             >
@@ -1217,7 +1216,7 @@ let userInput = ref("");
       <!-- Return to Home Page -->
       <nuxt-link to="/">
         <button
-          @click="resetScore(), setState(false)"
+          @click="resetScore(), stopTimer()"
           class="duration-250 mx-auto w-full rounded bg-red-200 py-2 px-5 text-[32px] uppercase text-red-600 transition-[colors,transform] hover:scale-105 hover:bg-red-300 hover:bg-gradient-to-r hover:from-red-200 hover:to-red-400 hover:text-red-700 active:translate-y-1"
         >
           Exit</button
